@@ -1,0 +1,488 @@
+[
+  {
+    "id": "drishyam",
+    "title": "Drishyam",
+    "year": 2015,
+    "country": "India",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Crime"
+    ],
+    "quality": 9,
+    "description": "A family man tries to protect his family amid a police investigation."
+  },
+  {
+    "id": "prestige",
+    "title": "The Prestige",
+    "year": 2006,
+    "country": "USA",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "quality": 10,
+    "description": "Two rival magicians pursue dangerous secrets."
+  },
+  {
+    "id": "shutter",
+    "title": "Shutter Island",
+    "year": 2010,
+    "country": "USA",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "An investigator visits an isolated psychiatric hospital."
+  },
+  {
+    "id": "gone",
+    "title": "Gone Girl",
+    "year": 2014,
+    "country": "USA",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Crime"
+    ],
+    "quality": 9,
+    "description": "A disappearance spirals into a media frenzy."
+  },
+  {
+    "id": "prisoners",
+    "title": "Prisoners",
+    "year": 2013,
+    "country": "USA",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Crime"
+    ],
+    "quality": 9,
+    "description": "A father and detective search for missing children."
+  },
+  {
+    "id": "parasite",
+    "title": "Parasite",
+    "year": 2019,
+    "country": "South Korea",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Comedy"
+    ],
+    "quality": 10,
+    "description": "Two families become entangled in a dark social satire."
+  },
+  {
+    "id": "memories",
+    "title": "Memories of Murder",
+    "year": 2003,
+    "country": "South Korea",
+    "genres": [
+      "Mystery",
+      "Crime",
+      "Drama"
+    ],
+    "quality": 10,
+    "description": "Detectives struggle to solve a series of murders."
+  },
+  {
+    "id": "andhadhun",
+    "title": "Andhadhun",
+    "year": 2018,
+    "country": "India",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Comedy"
+    ],
+    "quality": 9,
+    "description": "A pianist is caught in a twisting crime mystery."
+  },
+  {
+    "id": "kahaani",
+    "title": "Kahaani",
+    "year": 2012,
+    "country": "India",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "A woman searches Kolkata for her missing husband."
+  },
+  {
+    "id": "talaash",
+    "title": "Talaash",
+    "year": 2012,
+    "country": "India",
+    "genres": [
+      "Mystery",
+      "Crime",
+      "Drama"
+    ],
+    "quality": 8,
+    "description": "A detective investigates a mysterious death."
+  },
+  {
+    "id": "inception",
+    "title": "Inception",
+    "year": 2010,
+    "country": "USA",
+    "genres": [
+      "Science Fiction",
+      "Thriller",
+      "Action"
+    ],
+    "quality": 10,
+    "description": "A thief enters dreams for an impossible mission."
+  },
+  {
+    "id": "interstellar",
+    "title": "Interstellar",
+    "year": 2014,
+    "country": "USA",
+    "genres": [
+      "Science Fiction",
+      "Drama",
+      "Adventure"
+    ],
+    "quality": 10,
+    "description": "Explorers travel through space to save humanity."
+  },
+  {
+    "id": "arrival",
+    "title": "Arrival",
+    "year": 2016,
+    "country": "USA",
+    "genres": [
+      "Science Fiction",
+      "Drama",
+      "Mystery"
+    ],
+    "quality": 9,
+    "description": "A linguist attempts to communicate with aliens."
+  },
+  {
+    "id": "exmachina",
+    "title": "Ex Machina",
+    "year": 2014,
+    "country": "UK",
+    "genres": [
+      "Science Fiction",
+      "Thriller",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "A programmer evaluates an advanced artificial intelligence."
+  },
+  {
+    "id": "matrix",
+    "title": "The Matrix",
+    "year": 1999,
+    "country": "USA",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Thriller"
+    ],
+    "quality": 10,
+    "description": "A hacker questions the nature of reality."
+  },
+  {
+    "id": "oldboy",
+    "title": "Oldboy",
+    "year": 2003,
+    "country": "South Korea",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Action"
+    ],
+    "quality": 9,
+    "description": "A captive seeks answers after a sudden release."
+  },
+  {
+    "id": "se7en",
+    "title": "Se7en",
+    "year": 1995,
+    "country": "USA",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Mystery"
+    ],
+    "quality": 10,
+    "description": "Detectives investigate a series of elaborate murders."
+  },
+  {
+    "id": "zodiac",
+    "title": "Zodiac",
+    "year": 2007,
+    "country": "USA",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "Investigators pursue a notorious serial killer."
+  },
+  {
+    "id": "memento",
+    "title": "Memento",
+    "year": 2000,
+    "country": "USA",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "quality": 10,
+    "description": "A man with memory loss investigates a murder."
+  },
+  {
+    "id": "knives",
+    "title": "Knives Out",
+    "year": 2019,
+    "country": "USA",
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Crime"
+    ],
+    "quality": 9,
+    "description": "A detective investigates a wealthy family's secrets."
+  },
+  {
+    "id": "getout",
+    "title": "Get Out",
+    "year": 2017,
+    "country": "USA",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "quality": 9,
+    "description": "A weekend visit reveals unsettling secrets."
+  },
+  {
+    "id": "whiplash",
+    "title": "Whiplash",
+    "year": 2014,
+    "country": "USA",
+    "genres": [
+      "Drama",
+      "Music"
+    ],
+    "quality": 10,
+    "description": "A drummer faces an uncompromising teacher."
+  },
+  {
+    "id": "social",
+    "title": "The Social Network",
+    "year": 2010,
+    "country": "USA",
+    "genres": [
+      "Drama",
+      "Biography"
+    ],
+    "quality": 9,
+    "description": "A technology startup leads to fractured friendships."
+  },
+  {
+    "id": "her",
+    "title": "Her",
+    "year": 2013,
+    "country": "USA",
+    "genres": [
+      "Romance",
+      "Science Fiction",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "A lonely writer develops an unusual connection."
+  },
+  {
+    "id": "eternal",
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "year": 2004,
+    "country": "USA",
+    "genres": [
+      "Romance",
+      "Science Fiction",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "A couple wrestles with memories of their relationship."
+  },
+  {
+    "id": "truman",
+    "title": "The Truman Show",
+    "year": 1998,
+    "country": "USA",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Science Fiction"
+    ],
+    "quality": 9,
+    "description": "A man discovers his life may be staged."
+  },
+  {
+    "id": "city",
+    "title": "City of God",
+    "year": 2002,
+    "country": "Brazil",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "quality": 10,
+    "description": "Young people navigate crime in Rio de Janeiro."
+  },
+  {
+    "id": "lives",
+    "title": "The Lives of Others",
+    "year": 2006,
+    "country": "Germany",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "quality": 9,
+    "description": "A surveillance officer grows conflicted about his assignment."
+  },
+  {
+    "id": "secret",
+    "title": "The Secret in Their Eyes",
+    "year": 2009,
+    "country": "Argentina",
+    "genres": [
+      "Mystery",
+      "Crime",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "An investigator revisits an unsolved murder."
+  },
+  {
+    "id": "hunt",
+    "title": "The Hunt",
+    "year": 2012,
+    "country": "Denmark",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "quality": 9,
+    "description": "A teacher faces a devastating accusation."
+  },
+  {
+    "id": "incendies",
+    "title": "Incendies",
+    "year": 2010,
+    "country": "Canada",
+    "genres": [
+      "Mystery",
+      "Drama",
+      "War"
+    ],
+    "quality": 9,
+    "description": "Twins uncover secrets about their mother's past."
+  },
+  {
+    "id": "pan",
+    "title": "Pan's Labyrinth",
+    "year": 2006,
+    "country": "Spain",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "War"
+    ],
+    "quality": 9,
+    "description": "A child escapes into a dark fairy-tale world."
+  },
+  {
+    "id": "spirited",
+    "title": "Spirited Away",
+    "year": 2001,
+    "country": "Japan",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Adventure"
+    ],
+    "quality": 10,
+    "description": "A girl navigates a magical spirit world."
+  },
+  {
+    "id": "yourname",
+    "title": "Your Name",
+    "year": 2016,
+    "country": "Japan",
+    "genres": [
+      "Animation",
+      "Romance",
+      "Fantasy"
+    ],
+    "quality": 9,
+    "description": "Two teenagers form a mysterious connection."
+  },
+  {
+    "id": "shoplifters",
+    "title": "Shoplifters",
+    "year": 2018,
+    "country": "Japan",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "quality": 9,
+    "description": "An unconventional family faces difficult choices."
+  },
+  {
+    "id": "3idiots",
+    "title": "3 Idiots",
+    "year": 2009,
+    "country": "India",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "Friends rethink the meaning of success."
+  },
+  {
+    "id": "lunchbox",
+    "title": "The Lunchbox",
+    "year": 2013,
+    "country": "India",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "quality": 9,
+    "description": "A mistaken lunch delivery sparks a correspondence."
+  },
+  {
+    "id": "queen",
+    "title": "Queen",
+    "year": 2013,
+    "country": "India",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Adventure"
+    ],
+    "quality": 8,
+    "description": "A young woman discovers independence while traveling."
+  }
+]

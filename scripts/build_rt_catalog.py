@@ -57,8 +57,8 @@ def build():
         rank_el=item.select_one('.countdown-index')
         heading=item.select_one('h2,h3,.article_movie_title,.countdown-item-title')
         if not rank_el or not heading:continue
-        rank_match=re.search(r'(\\d{1,3})',rank_el.get_text(' ',strip=True))
-        title_match=re.search(r'(.+?)\\s*\\((\\d{4})\\)',heading.get_text(' ',strip=True))
+        rank_match=re.search(r'(\d{1,3})',rank_el.get_text(' ',strip=True))
+        title_match=re.search(r'(.+?)\s*\((\d{4})\)',heading.get_text(' ',strip=True))
         if rank_match and title_match:
             candidates.append({'rank':int(rank_match.group(1)),'title':title_match.group(1).strip(),'year':int(title_match.group(2))})
     if len(candidates)<80:
@@ -78,11 +78,11 @@ def build():
         # rank marker within a short source window, rather than inventing titles.
         candidates=[]
         for heading in soup.select('h2,h3'):
-            match=re.search(r'(.+?)\\s*\\((\\d{4})\\)',heading.get_text(' ',strip=True))
+            match=re.search(r'(.+?)\s*\((\d{4})\)',heading.get_text(' ',strip=True))
             if not match:continue
-            previous=heading.find_previous(string=re.compile(r'^\\s*#\\d{1,3}\\s*$'))
+            previous=heading.find_previous(string=re.compile(r'^\s*#\d{1,3}\s*$'))
             if previous is None:continue
-            rank=int(re.search(r'\\d+',str(previous)).group())
+            rank=int(re.search(r'\d+',str(previous)).group())
             if 1<=rank<=110:candidates.append({'rank':rank,'title':match.group(1).strip(),'year':int(match.group(2))})
     # Keep duplicates only if source really has them, do not fabricate 100 entries.
     unique={}

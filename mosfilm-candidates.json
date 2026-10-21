@@ -1,0 +1,104 @@
+{
+  "description": "Mosfilm YouTube player candidates; embedding and US playback not browser-tested.",
+  "movies": [
+    {
+      "title": "Stalker",
+      "year": 1979,
+      "youtube_video_id": "TGRDYpCmMcM",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "Zero City",
+      "year": 1988,
+      "youtube_video_id": "12WwlJYarow",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "The Tale of Tsar Saltan",
+      "year": 1966,
+      "youtube_video_id": "g22ux0aiCI4",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "Ilya Muromets",
+      "year": 1956,
+      "youtube_video_id": "uopfqauEz64",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "Kin-dza-dza!",
+      "year": 1986,
+      "youtube_video_id": "EYHv8eJrW2Y",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "Sadko",
+      "year": 1953,
+      "youtube_video_id": "zedi4fgeMeI",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "Viy",
+      "year": 1967,
+      "youtube_video_id": "Amh3uudVMBo",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "Moon Rainbow",
+      "year": 1983,
+      "youtube_video_id": "5aK0KP27iqg",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    },
+    {
+      "title": "The Invisible Man",
+      "year": 1984,
+      "youtube_video_id": "K3CSWhXOB6k",
+      "uploader": "Mosfilm (reported)",
+      "source": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
+      "authorization_status": "official_source_reported",
+      "full_length_verified": false,
+      "embed_status": "embed_test_pending",
+      "us_availability": "unverified"
+    }
+  ]
+}

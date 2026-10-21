@@ -102,7 +102,10 @@ def build():
         key=(m['title'].lower(),m['year'])
         unique.setdefault(key,m)
     movies=list(unique.values())
-    if len(movies)<80:raise RuntimeError(f'Only parsed {len(movies)} films; refusing to overwrite previous catalog')
+    if len(movies)<80:
+        print('HTML sample:',repr(html[:900]))
+        print('TEXT sample:',repr(soup.get_text(' ',strip=True)[:1200]))
+        raise RuntimeError(f'Only parsed {len(movies)} films; refusing to overwrite previous catalog')
     movies.sort(key=lambda x:x['rank'])
     for m in movies:
         m['availability']='Listed free on YouTube by Rotten Tomatoes (Aug 2025); current availability unverified'

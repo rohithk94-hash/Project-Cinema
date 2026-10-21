@@ -84,6 +84,18 @@ def build():
             if previous is None:continue
             rank=int(re.search(r'\d+',str(previous)).group())
             if 1<=rank<=110:candidates.append({'rank':rank,'title':match.group(1).strip(),'year':int(match.group(2))})
+    if len(candidates)<80:
+        # Template-independent fallback: parse adjacent rank/title text nodes.
+        candidates=[]
+        lines=[x.strip() for x in soup.get_text('\n',strip=True).splitlines() if x.strip()]
+        for i,line in enumerate(lines[:-1]):
+            rank_match=re.fullmatch(r'#\s*(\d{1,3})',line)
+            if not rank_match:continue
+            for candidate in lines[i+1:i+5]:
+                title_match=re.fullmatch(r'(.+?)\s*\((\d{4})\)',candidate)
+                if title_match:
+                    candidates.append({'rank':int(rank_match.group(1)),'title':title_match.group(1),'year':int(title_match.group(2))})
+                    break
     # Keep duplicates only if source really has them, do not fabricate 100 entries.
     unique={}
     for m in candidates:

@@ -50,18 +50,27 @@ def build():
     for h in p.headings:
         m=re.match(r'^#?(\d{1,3})\s*\.?\s*(.+?)\s*\((\d{4})\)$',h)
         if m:candidates.append({'rank':int(m.group(1)),'title':m.group(2),'year':int(m.group(3))})
-    # RT markup may place the rank in a separate div from the film heading.
+    from bs4 import BeautifulSoup
+    soup=BeautifulSoup(html,'html.parser')
+    candidates=[]
+    for item in soup.select('.countdown-item'):
+        rank_el=item.select_one('.countdown-index')
+        heading=item.select_one('h2,h3')
+        if not rank_el or not heading:continue
+        rank_match=re.search(r'(\\d{1,3})',rank_el.get_text(' ',strip=True))
+        title_match=re.search(r'(.+?)\\s*\\((\\d{4})\\)',heading.get_text(' ',strip=True))
+        if rank_match and title_match:
+            candidates.append({'rank':int(rank_match.group(1)),'title':title_match.group(1).strip(),'year':int(title_match.group(2))})
     if len(candidates)<80:
-        from bs4 import BeautifulSoup
-        soup=BeautifulSoup(html,'html.parser')
+        # RT sometimes changes its countdown layout. Match headings to the nearest prior
+        # rank marker within a short source window, rather than inventing titles.
         candidates=[]
         for heading in soup.select('h2,h3'):
-            title=heading.get_text(' ',strip=True)
-            match=re.search(r'(.+?)\s*\((\d{4})\)',title)
+            match=re.search(r'(.+?)\\s*\\((\\d{4})\\)',heading.get_text(' ',strip=True))
             if not match:continue
-            rank_node=heading.find_previous(string=re.compile(r'^#\d{1,3}$'))
-            if rank_node is None:continue
-            rank=int(str(rank_node).strip()[1:])
+            previous=heading.find_previous(string=re.compile(r'^\\s*#\\d{1,3}\\s*$'))
+            if previous is None:continue
+            rank=int(re.search(r'\\d+',str(previous)).group())
             if 1<=rank<=110:candidates.append({'rank':rank,'title':match.group(1).strip(),'year':int(match.group(2))})
     # Keep duplicates only if source really has them, do not fabricate 100 entries.
     unique={}

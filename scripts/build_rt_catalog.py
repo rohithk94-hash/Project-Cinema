@@ -55,12 +55,24 @@ def build():
     candidates=[]
     for item in soup.select('.countdown-item'):
         rank_el=item.select_one('.countdown-index')
-        heading=item.select_one('h2,h3')
+        heading=item.select_one('h2,h3,.article_movie_title,.countdown-item-title')
         if not rank_el or not heading:continue
         rank_match=re.search(r'(\\d{1,3})',rank_el.get_text(' ',strip=True))
         title_match=re.search(r'(.+?)\\s*\\((\\d{4})\\)',heading.get_text(' ',strip=True))
         if rank_match and title_match:
             candidates.append({'rank':int(rank_match.group(1)),'title':title_match.group(1).strip(),'year':int(title_match.group(2))})
+    if len(candidates)<80:
+        # In RT's countdown template the title is frequently in a div, not an h2.
+        candidates=[]
+        for item in soup.select('.countdown-item'):
+            rank_el=item.select_one('.countdown-index')
+            if not rank_el:continue
+            rank_match=re.search(r'(\d{1,3})',rank_el.get_text(' ',strip=True))
+            if not rank_match:continue
+            title_el=item.select_one('.article_movie_title,.countdown-item-title,h2,h3')
+            if not title_el:continue
+            match=re.search(r'(.+?)\s*\((\d{4})\)',title_el.get_text(' ',strip=True))
+            if match:candidates.append({'rank':int(rank_match.group(1)),'title':match.group(1).strip(),'year':int(match.group(2))})
     if len(candidates)<80:
         # RT sometimes changes its countdown layout. Match headings to the nearest prior
         # rank marker within a short source window, rather than inventing titles.

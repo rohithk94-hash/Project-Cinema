@@ -96,6 +96,15 @@ def build():
                 if title_match:
                     candidates.append({'rank':int(rank_match.group(1)),'title':title_match.group(1),'year':int(title_match.group(2))})
                     break
+    if len(candidates)<80:
+        # Rotten Tomatoes exposes rank, linked title and year as adjacent text.
+        flat=soup.get_text(' ',strip=True)
+        candidates=[]
+        for match in re.finditer(r'#\s*(\d{1,3})\s+(.{1,150}?)\s*\((\d{4})\)',flat):
+            rank=int(match.group(1))
+            title=match.group(2).strip()
+            if 1<=rank<=100 and not re.search(r'#\d+',title):
+                candidates.append({'rank':rank,'title':title,'year':int(match.group(3))})
     # Keep duplicates only if source really has them, do not fabricate 100 entries.
     unique={}
     for m in candidates:

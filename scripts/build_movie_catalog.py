@@ -42,6 +42,15 @@ SEEDS = [
     ("The Ascent",1977,"v21lQ449T3Y","Drama","Mosfilm","https://www.youtube.com/watch?v=v21lQ449T3Y","Mosfilm English channel listing"),
     ("Ballad of a Soldier",1959,"8zooDjp0VrE","Drama","Mosfilm","https://www.youtube.com/watch?v=8zooDjp0VrE","Mosfilm English channel listing; uploader mentions separate English version"),
     ("The Cranes Are Flying",1957,"2OccZQmxKac","Drama","Mosfilm","https://www.reddit.com/r/IMDbFilmGeneral/comments/oqwyqk","Linked in community to Mosfilm original channel; uploader unconfirmed"),
+    ("Operation Y and Shurik's Other Adventures",1965,"m3n4LptYWNo","Comedy","Mosfilm","https://www.youtube.com/watch?v=m3n4LptYWNo","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
+    ("Love and Doves",1984,"CLjLLHDUiiA","Romance","Mosfilm","https://www.youtube.com/watch?v=CLjLLHDUiiA","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
+    ("The Diamond Arm",1969,"MkHiu9fD820","Comedy","Mosfilm","https://www.youtube.com/watch?v=MkHiu9fD820","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
+    ("Carnival Night",1956,"TxrtUnWBCeI","Comedy","Mosfilm","https://www.youtube.com/watch?v=TxrtUnWBCeI","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
+    ("Moscow Does Not Believe in Tears",1979,"NTWA_7-ld_U","Romance","Mosfilm","https://www.youtube.com/watch?v=NTWA_7-ld_U","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
+    ("The Red Snowball Tree",1973,"a-RLbCXVvwI","Drama","Mosfilm","https://www.youtube.com/watch?v=a-RLbCXVvwI","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
+    ("Ivan Vasilyevich Changes His Profession",1973,"TQ8onQu5QKY","Comedy","Mosfilm","https://www.tumgik.com/tag/i%20am%20spending%20time%20with%20my%20family%20and%20will%20be%20inactive%20still%20for%20a%20couple%20of%20weeks","Direct film link attributed to official Mosfilm channel in cinema discussion; uploader not browser-verified"),
+    ("White Sun of the Desert",1970,"GqnqFhc9aho","Adventure","Mosfilm","https://www.tumgik.com/tag/i%20am%20spending%20time%20with%20my%20family%20and%20will%20be%20inactive%20still%20for%20a%20couple%20of%20weeks","Direct film link attributed to official Mosfilm channel in cinema discussion; uploader not browser-verified"),
+    ("The Girls",1961,"8CYY8EM5xYE","Romance","Mosfilm","https://www.reddit.com/r/AskARussian/comments/ub9zdv","Direct film link attributed to official Mosfilm channel in cinema discussion; uploader not browser-verified"),
 ]
 
 def get(url):

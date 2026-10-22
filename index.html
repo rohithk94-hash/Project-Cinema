@@ -14,7 +14,7 @@
 .brand{font-size:clamp(1.22rem,2vw,1.72rem);font-weight:1000;letter-spacing:-.075em;white-space:nowrap}.brand span{color:var(--red)}.brand small{font-weight:700;color:#fff;letter-spacing:-.045em}
 .topnav{display:flex;align-items:center;gap:27px;margin-right:auto}.topnav a{font-size:.88rem;font-weight:650;color:#dadce1;white-space:nowrap}.topnav a:hover{color:white}.top-actions{display:flex;align-items:center;gap:8px}
 .icon-btn{width:42px;height:42px;display:grid;place-items:center;background:transparent;border:1px solid transparent;border-radius:999px;color:#fff;font-size:1.35rem}.icon-btn:hover{background:#ffffff1b}.watchlist-cta{border:1px solid #ffffff42;background:#ffffff17;color:white;padding:11px 17px;font-weight:700;border-radius:9px;font-size:.84rem}
-.hero{height:min(730px,79vw);min-height:580px;position:relative;overflow:hidden;background:#191b20}.hero-art{position:absolute;inset:0;background:#1e2430 center 40%/cover no-repeat;transform:scale(1.015)}.hero::before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#09090cfb 1%,#09090ce9 24%,#09090c76 64%,#09090c20 100%),linear-gradient(0deg,#09090c 0%,transparent 38%)}.hero-content{position:relative;z-index:2;padding:135px clamp(20px,4.2vw,90px) 140px;max-width:780px;display:flex;flex-direction:column;justify-content:center;height:100%}.hero-label{color:var(--yellow);font-size:.76rem;font-weight:850;letter-spacing:.19em;text-transform:uppercase;margin:0 0 19px}.hero h1{font-size:clamp(3rem,6.6vw,7.1rem);font-weight:1000;letter-spacing:-.075em;line-height:.97;margin:0;max-width:750px;text-shadow:0 4px 35px #0008}.hero-meta{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:19px 0 4px;font-size:.84rem;color:#e1e1e4}.hero-meta span:not(:last-child):after{content:"•";padding-left:9px;color:#999}.hero-description{max-width:490px;line-height:1.6;font-size:.99rem;color:#ececf0;margin:13px 0 25px;text-shadow:0 2px 10px #000c}.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.btn{border:1px solid #ffffff33;background:#ffffff20;color:#fff;border-radius:9px;padding:12px 18px;font-weight:800;font-size:.88rem;min-height:46px;transition:background .18s,transform .18s}.btn:hover{background:#ffffff35;transform:translateY(-1px)}.btn.primary{border-color:white;background:white;color:#121216}.btn.primary:hover{background:#dedee2}.btn.accent{background:var(--red);border-color:var(--red);color:white}.btn.ghost{background:#0e0e1399;backdrop-filter:blur(10px)}
+.hero{height:min(730px,79vw);min-height:580px;position:relative;overflow:hidden;background:#191b20}.hero-art{position:absolute;inset:0;background:#1e2430 center 40%/cover no-repeat;transform:scale(1.015);opacity:1;transition:opacity .85s ease,transform 7s ease}.hero-art.is-changing{opacity:0;transform:scale(1.06)}.hero-art-next{position:absolute;inset:0;background:#1e2430 center 40%/cover no-repeat;opacity:0;transition:opacity 1.05s ease;pointer-events:none}.hero-art-next.is-visible{opacity:1}.hero-content.is-changing{opacity:.25;transform:translateY(7px)}.hero-content{transition:opacity .5s ease,transform .5s ease}.hero-dots{position:absolute;bottom:105px;left:clamp(20px,4.2vw,90px);z-index:5;display:flex;gap:8px;align-items:center}.hero-dot{border:0;padding:0;width:21px;height:4px;border-radius:99px;background:#ffffff6b;transition:width .25s,background .25s}.hero-dot[aria-current=true]{background:#fff;width:41px}.hero-dot:hover{background:var(--yellow)}.hero::before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#09090cfb 1%,#09090ce9 24%,#09090c76 64%,#09090c20 100%),linear-gradient(0deg,#09090c 0%,transparent 38%)}.hero-content{position:relative;z-index:2;padding:135px clamp(20px,4.2vw,90px) 140px;max-width:780px;display:flex;flex-direction:column;justify-content:center;height:100%}.hero-label{color:var(--yellow);font-size:.76rem;font-weight:850;letter-spacing:.19em;text-transform:uppercase;margin:0 0 19px}.hero h1{font-size:clamp(3rem,6.6vw,7.1rem);font-weight:1000;letter-spacing:-.075em;line-height:.97;margin:0;max-width:750px;text-shadow:0 4px 35px #0008}.hero-meta{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:19px 0 4px;font-size:.84rem;color:#e1e1e4}.hero-meta span:not(:last-child):after{content:"•";padding-left:9px;color:#999}.hero-description{max-width:490px;line-height:1.6;font-size:.99rem;color:#ececf0;margin:13px 0 25px;text-shadow:0 2px 10px #000c}.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.btn{border:1px solid #ffffff33;background:#ffffff20;color:#fff;border-radius:9px;padding:12px 18px;font-weight:800;font-size:.88rem;min-height:46px;transition:background .18s,transform .18s}.btn:hover{background:#ffffff35;transform:translateY(-1px)}.btn.primary{border-color:white;background:white;color:#121216}.btn.primary:hover{background:#dedee2}.btn.accent{background:var(--red);border-color:var(--red);color:white}.btn.ghost{background:#0e0e1399;backdrop-filter:blur(10px)}
 .hero-stat{position:absolute;bottom:110px;right:clamp(20px,4.2vw,90px);z-index:2;font-size:.77rem;font-weight:700;color:#fff9;border-left:3px solid var(--red);padding:11px 0 11px 18px;text-align:right}
 main{position:relative;z-index:3;margin-top:-90px;padding:0 clamp(20px,4.2vw,90px) 70px}.row-section{margin-bottom:34px}.section-head{display:flex;align-items:end;gap:15px;justify-content:space-between;margin:0 0 14px}.section-title{font-size:clamp(1.3rem,2.05vw,1.72rem);font-weight:850;letter-spacing:-.04em;margin:0}.section-sub{margin:5px 0 0;font-size:.82rem;color:var(--muted);line-height:1.5}.row-controls{display:flex;gap:7px}.arrow{width:33px;height:33px;border-radius:100%;background:#202129;border:1px solid #ffffff28;color:#fff;font-size:1rem}.rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(214px,22vw,290px);gap:13px;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory;padding:3px 2px 15px;margin:0 -2px}.rail::-webkit-scrollbar{display:none}.rail .movie-card{scroll-snap-align:start}
 .movie-card{background:#16171c;border:1px solid #ffffff0e;border-radius:var(--radius);overflow:hidden;position:relative;min-width:0;transition:transform .2s,border-color .2s;box-shadow:0 7px 22px #0002}.movie-card:hover{transform:translateY(-3px);border-color:#ffffff50}.cover{width:100%;aspect-ratio:16/9;border:0;padding:0;display:block;position:relative;overflow:hidden;background:linear-gradient(135deg,#2d1c29,#252f3e);color:white;text-align:left}.cover img{width:100%;height:100%;object-fit:cover;transition:transform .32s;opacity:.92}.movie-card:hover .cover img{transform:scale(1.06)}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0a0b11b5,transparent 64%);pointer-events:none}.play-circle{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:55px;height:55px;border-radius:50%;background:#07080cbe;border:2px solid white;opacity:0;transition:opacity .2s}.cover:hover .play-circle,.cover:focus-visible .play-circle{opacity:1}.cover-fallback{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;text-align:center;padding:20px;font-size:1.7rem;letter-spacing:-.055em;color:#fff}.cover-badge{position:absolute;top:9px;left:10px;z-index:3;padding:5px 9px;background:#09090dcc;backdrop-filter:blur(8px);border:1px solid #ffffff30;border-radius:6px;font-size:.62rem;font-weight:750;letter-spacing:.045em;color:#f3f3f7;text-transform:uppercase}.card-bottom{padding:13px 13px 11px}.card-name{font-size:1.01rem;line-height:1.28;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:850;margin:0 0 5px}.card-meta{display:flex;gap:7px;align-items:center;color:#a7a9b3;font-size:.73rem;white-space:nowrap;overflow:hidden}.card-meta span:not(:last-child):after{content:"·";margin-left:7px}.card-footer{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-top:10px}.movie-actions{display:flex;align-items:center;gap:6px}.mini-action{display:grid;place-items:center;border-radius:8px;width:34px;height:32px;background:#ffffff11;border:1px solid #ffffff1a;color:#fff;font-size:1.05rem}.mini-action[aria-pressed=true]{border-color:#f8d4946a;background:#f8d49425;color:#f8d494}.mini-action:hover{background:#ffffff28}.watch-cta{font-size:.73rem;border:0;border-radius:7px;background:#f4f4f6;color:#111;padding:8px 11px;font-weight:850}.watch-cta:hover{background:#fff}.card-reason{font-size:.7rem;color:#d7b887;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;padding-top:7px}
@@ -23,7 +23,7 @@ main{position:relative;z-index:3;margin-top:-90px;padding:0 clamp(20px,4.2vw,90p
 footer{border-top:1px solid #ffffff11;padding:35px clamp(20px,4.2vw,90px) 45px;background:#0c0d11;color:#9c9fa9;display:flex;gap:18px;align-items:start;justify-content:space-between;font-size:.76rem;line-height:1.7}footer strong{color:white;font-size:.95rem}
 dialog{color:var(--fg);background:#15161b;border:1px solid #ffffff30;border-radius:16px;box-shadow:0 20px 90px #000c;padding:0}dialog::backdrop{background:#000d;backdrop-filter:blur(7px)}.player-dialog{width:min(1150px,calc(100vw - 28px));max-height:calc(100dvh - 24px);overflow:auto}.modal-head{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line)}.modal-head h2{margin:0;font-size:1.15rem;line-height:1.3}.modal-close{color:white;border:1px solid #ffffff2a;background:#ffffff12;border-radius:9px;width:40px;height:40px;font-size:1.25rem;flex:none}.video-wrap{width:100%;aspect-ratio:16/9;background:#000}.video-wrap iframe{width:100%;height:100%;border:0;display:block}.modal-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:17px 20px}.modal-foot p{color:var(--muted);margin:0;font-size:.78rem;max-width:700px;line-height:1.5}.modal-foot a{color:#f8d494;text-decoration:underline;font-weight:700;font-size:.82rem}.add-dialog{width:min(510px,calc(100vw - 30px))}.form-body{padding:21px;display:grid;gap:16px}.form-body label{display:grid;gap:7px;color:#d1d2d8;font-size:.84rem;font-weight:700}.form-body input,.form-body select{width:100%;background:#24252c;border:1px solid #ffffff30;border-radius:9px;color:#fff;padding:12px}.form-error{min-height:18px;color:#ff8e9d;font-size:.8rem}.toast{position:fixed;z-index:99;bottom:24px;left:50%;transform:translateX(-50%);background:#f2f2f5;color:#141418;box-shadow:0 10px 40px #000a;padding:12px 22px;border-radius:10px;font-size:.83rem;font-weight:750;pointer-events:none;max-width:calc(100vw - 25px)}.loading{min-height:130px;color:#b4b4bd;display:flex;align-items:center}
 @media(max-width:1200px){.library-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.topbar{gap:20px}.topnav{gap:15px}}
-@media(max-width:850px){.topnav{display:none}.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{min-height:585px;height:70vw}.hero-content{padding-top:110px}.hero-stat{display:none}.spotlight{align-items:flex-start}.spotlight a{margin-left:0}.spotlight{flex-wrap:wrap}}
+@media(max-width:850px){.topnav{display:none}.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{min-height:585px;height:70vw}.hero-content{padding-top:110px}.hero-stat{display:none}.hero-dots{bottom:55px}.spotlight{align-items:flex-start}.spotlight a{margin-left:0}.spotlight{flex-wrap:wrap}}
 @media(max-width:620px){.topbar{height:62px}.brand{font-size:1.23rem}.top-actions .watchlist-cta{display:none}.hero{min-height:570px;height:90svh;max-height:750px}.hero-art{background-position:center center!important}.hero::before{background:linear-gradient(90deg,#09090cf0,#09090c45 88%),linear-gradient(0deg,#09090c 0%,transparent 73%)}.hero-content{padding:105px 20px 100px;justify-content:flex-end}.hero h1{font-size:clamp(3.3rem,12vw,5rem)}.hero-description{font-size:.87rem}.hero-actions .btn{padding:10px 13px;min-height:43px;font-size:.82rem}main{margin-top:-42px}.section-head{align-items:start}.row-controls{display:none}.rail{grid-auto-columns:75vw;gap:12px}.library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card-bottom{padding:10px}.card-name{font-size:.87rem}.card-meta{font-size:.65rem}.card-footer{flex-wrap:wrap}.watch-cta{font-size:.7rem;padding:7px}.mini-action{width:32px;height:30px}.section-title{font-size:1.25rem}.search-field{min-width:100%;max-width:none}.spotlight{padding:16px;margin-bottom:29px}.spotlight strong{font-size:.9rem}.spotlight p{font-size:.76rem}footer{flex-direction:column;padding-bottom:32px}.play-circle{opacity:1;width:45px;height:45px}.modal-head{padding:11px 13px}.modal-head h2{font-size:.97rem}.modal-foot{padding:11px 13px}dialog{border-radius:9px}.player-dialog{width:calc(100vw - 10px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 </style>
@@ -35,19 +35,19 @@ dialog{color:var(--fg);background:#15161b;border:1px solid #ffffff30;border-radi
  <div class="top-actions"><button class="icon-btn" id="focusSearch" aria-label="Search films" title="Search films">⌕</button><button class="watchlist-cta" id="headerSaved">♡ My list <span id="listCount"></span></button><button class="icon-btn" id="openAdd" aria-label="Add a YouTube film" title="Add a YouTube film">＋</button></div>
 </header>
 <section class="hero" id="home">
- <div class="hero-art" id="heroArt" role="img" aria-label="Featured movie artwork" style="background-image:url('https://i.ytimg.com/vi/zjIiApN6cfg/maxresdefault.jpg')"></div>
+ <div class="hero-art" id="heroArt" role="img" aria-label="Featured movie artwork"></div><div class="hero-art-next" id="heroArtNext" aria-hidden="true"></div>
  <div class="hero-content">
   <div class="hero-label">CINEMA+ ORIGINAL PICKS · WATCH FREE</div>
-  <h1 id="heroTitle">Come and See</h1>
-  <div class="hero-meta" id="heroMeta"><span>1985</span><span>Drama</span><span>Mosfilm</span></div>
-  <p class="hero-description" id="heroDescription">A haunting anti-war masterpiece. Explore remarkable movies released by studios and film archives.</p>
+  <h1 id="heroTitle">Cinema+ Picks</h1>
+  <div class="hero-meta" id="heroMeta"><span>Handpicked movies</span></div>
+  <p class="hero-description" id="heroDescription">A world of cinema, one movie at a time. Discover your next favorite film.</p>
   <div class="hero-actions">
    <button class="btn primary" id="heroPlay">▶ Play film</button>
    <button class="btn ghost" id="heroSave" aria-pressed="false">＋ My list</button>
    <button class="btn ghost" id="surprise">✦ Surprise me</button>
   </div>
  </div>
- <div class="hero-stat"><span id="heroCount">Film collection</span><br>Full-length film links · YouTube</div>
+ <div class="hero-dots" id="heroDots" role="group" aria-label="Featured films"></div><div class="hero-stat"><span id="heroCount">Film collection</span><br>Full-length film links · YouTube</div>
 </section>
 <main>
  <section class="row-section" id="for-you"><div class="section-head"><div><h2 class="section-title" id="personalTitle">Selected for you</h2><p class="section-sub" id="personalDesc">Picks based on your favorite genres and the films you explore</p></div><div class="row-controls"><button class="arrow" data-rail="personalRail" data-dir="-1" aria-label="Scroll recommendations left">‹</button><button class="arrow" data-rail="personalRail" data-dir="1" aria-label="Scroll recommendations right">›</button></div></div><div class="rail" id="personalRail"><div class="loading">Curating your movie night…</div></div></section>
@@ -135,13 +135,53 @@ function render(){
  $('libraryTitle').textContent=mode==='saved'?'My List':'All films';$('librarySubtitle').textContent=mode==='saved'?'Movies you have saved for another night':'Full-length YouTube links from film studios and archives';
  $('totalCount').textContent=shown.length+' of '+films.length+' titles';$('heroSave').textContent=has('saved',featured.id)?'♥ In My List':'＋ My list';$('heroSave').setAttribute('aria-pressed',String(has('saved',featured.id)));$('heroCount').textContent=films.length+' films in the library';
 }
-function hero(m){
- featured=m;$('heroTitle').textContent=title(m);
- $('heroArt').style.backgroundImage='url("https://i.ytimg.com/vi/'+m.id+'/maxresdefault.jpg")';
- const meta=$('heroMeta');meta.replaceChildren();[m.year||'',m.genre||'',m.archive||'YouTube'].filter(Boolean).forEach(x=>meta.append(node('span','',String(x))));
- $('heroDescription').textContent=m.id===DEFAULT_MOVIE.id?'A haunting anti-war masterpiece. Browse exceptional films uploaded by independent studios and film archives.':(m.archive==='Korean Film Archive'?'Discover a classic of Korean cinema from an archive-linked YouTube film.':'A handpicked film from the Mosfilm cinema archive.')+' Watch directly in Project Cinema, subject to YouTube availability.';
- $('heroSave').textContent=has('saved',m.id)?'♥ In My List':'＋ My list';
+let heroSelection=[],heroIndex=0,heroTimer=null,heroSwapTimer=null,heroPaused=false;
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function setHeroArt(m){
+ const image='url("https://i.ytimg.com/vi/'+m.id+'/maxresdefault.jpg")';
+ const next=$('heroArtNext'),art=$('heroArt');
+ if(reduceMotion){art.style.backgroundImage=image;next.classList.remove('is-visible');return}
+ next.style.backgroundImage=image;next.classList.remove('is-visible');
+ // Flush layout so a new transition starts even if a visitor skips slides quickly.
+ void next.offsetWidth;next.classList.add('is-visible');
+ clearTimeout(heroSwapTimer);
+ heroSwapTimer=setTimeout(()=>{art.style.backgroundImage=image;next.classList.remove('is-visible')},1100);
 }
+function hero(m,animate=true){
+ featured=m;$('heroTitle').textContent=title(m);
+ setHeroArt(m);
+ const meta=$('heroMeta');meta.replaceChildren();[m.year||'',m.genre||'',m.archive||'YouTube'].filter(Boolean).forEach(x=>meta.append(node('span','',String(x))));
+ $('heroDescription').textContent=m.archive==='Korean Film Archive'?'Explore a landmark of Korean cinema from the Korean Film Archive.':m.archive==='Mosfilm'?'Discover timeless cinema from the Mosfilm collection.':'A handpicked film to watch tonight.';
+ $('heroSave').textContent=has('saved',m.id)?'♥ In My List':'＋ My list';
+ $('heroSave').setAttribute('aria-pressed',String(has('saved',m.id)));
+ $('heroArt').setAttribute('aria-label','Featured artwork for '+title(m));
+ Array.from($('heroDots').children).forEach((dot,i)=>dot.setAttribute('aria-current',String(i===heroIndex)));
+}
+function showHeroAt(index){
+ if(!heroSelection.length)return;
+ heroIndex=(index+heroSelection.length)%heroSelection.length;
+ hero(heroSelection[heroIndex]);
+}
+function startHeroRotation(){
+ clearInterval(heroTimer);
+ if(reduceMotion||document.hidden||heroPaused||heroSelection.length<2)return;
+ heroTimer=setInterval(()=>showHeroAt(heroIndex+1),6500);
+}
+function setupHeroRotation(){
+ // Start with a variety of films, never pin a single title as the background.
+ const favorites=['Solaris','The Diamond Arm','The Cranes Are Flying','Afonya','The Marines Who Never Returned','Mirror','Love and Doves'];
+ heroSelection=favorites.map(name=>films.find(m=>m.title===name)).filter(Boolean);
+ if(heroSelection.length<5)heroSelection=recommended(films).filter(m=>m.id!==DEFAULT_MOVIE.id).slice(0,7);
+ heroIndex=0;
+ const dots=$('heroDots');dots.replaceChildren();
+ heroSelection.forEach((m,i)=>{const dot=button('','hero-dot',()=>{showHeroAt(i);startHeroRotation()});dot.setAttribute('aria-label','Feature '+m.title);dot.setAttribute('aria-current',String(i===heroIndex));dots.append(dot)});
+ if(heroSelection.length){hero(heroSelection[0],false);startHeroRotation()}
+}
+$('home').addEventListener('mouseenter',()=>{heroPaused=true;clearInterval(heroTimer)});
+$('home').addEventListener('mouseleave',()=>{heroPaused=false;startHeroRotation()});
+$('home').addEventListener('focusin',()=>{heroPaused=true;clearInterval(heroTimer)});
+$('home').addEventListener('focusout',e=>{if(!$('home').contains(e.relatedTarget)){heroPaused=false;startHeroRotation()}});
+document.addEventListener('visibilitychange',startHeroRotation);
 function play(m){
  if(!VALID_ID.test(m.id))return;
  lastFocused=document.activeElement;const box=$('videoWrap');box.replaceChildren();
@@ -186,11 +226,11 @@ async function init(){
  const existing=new Set(),incoming=[];for(const m of data.movies){if(!m||!VALID_ID.test(m.id)||typeof m.title!=='string'||!m.title.trim()||existing.has(m.id))continue;existing.add(m.id);incoming.push(m)}
  if(incoming.length<20)throw Error('Too few source-linked film IDs');
  films=incoming;const seen=new Set(films.map(m=>m.id));for(const m of profile.custom){if(m&&VALID_ID.test(m.id)&&typeof m.title==='string'&&!seen.has(m.id)){films.push(m);seen.add(m.id)}}
- hero(films.find(m=>m.id===DEFAULT_MOVIE.id)||films[0]);
- }catch(error){console.error('Project Cinema catalog error',error);films=[DEFAULT_MOVIE];hero(DEFAULT_MOVIE);toast('Movie catalog unavailable; showing the reference film')}
+ setupHeroRotation();
+ }catch(error){console.error('Project Cinema catalog error',error);films=[DEFAULT_MOVIE];setupHeroRotation();toast('Movie catalog unavailable; showing the reference film')}
  render();
 }
-hero(DEFAULT_MOVIE);render();init();
+render();init();
 })();
 </script>
 </body>

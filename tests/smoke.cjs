@@ -17,7 +17,11 @@ async function run(){
   assert(await page.locator('#personalRail .movie-card').count()>=10,'Recommendations rail should populate');
   assert(await page.locator('#worldRail .movie-card').count()>=10,'Korean films rail should populate');
   assert.equal(await page.locator('#totalCount').innerText(),'36 of 36 titles');
-  assert.equal(await page.locator('#heroTitle').innerText(),'Come and See');
+  assert.equal(await page.locator('#heroTitle').innerText(),'Solaris','Rotating hero should open on a different film');
+  assert(await page.locator('#heroDots button').count()>=5,'Featured carousel should have navigable slides');
+  await page.locator('#heroDots button').nth(1).click();
+  assert.equal(await page.locator('#heroTitle').innerText(),'The Diamond Arm','Hero carousel should change featured film');
+  assert((await page.locator('#heroArtNext').getAttribute('style')).includes('MkHiu9fD820'),'Hero artwork must change with title');
   const first=page.locator('#libraryGrid .movie-card').first();
   await first.locator('button.cover').click();
   assert(await page.locator('#playerDialog').evaluate(el=>el.open),'Clicking a movie must open modal');

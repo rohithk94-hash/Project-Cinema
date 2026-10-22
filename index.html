@@ -157,7 +157,8 @@ function play(m){
  box.append(frame);$('playerDialog').showModal();
  const old=profile.played[m.id]||{count:0};profile.played[m.id]={count:Math.min(999,(old.count||0)+1),last:Date.now()};persist();
 }
-function closePlayer(){if($('playerDialog').open)$('playerDialog').close();else $('videoWrap').replaceChildren()}
+function closePlayer(){$('videoWrap').replaceChildren();if($('playerDialog').open)$('playerDialog').close()}
+$('playerDialog').addEventListener('cancel',()=>{$('videoWrap').replaceChildren()});
 $('playerDialog').addEventListener('close',()=>{$('videoWrap').replaceChildren();render();if(lastFocused&&lastFocused.isConnected)lastFocused.focus({preventScroll:true})});
 $('playerDialog').addEventListener('click',e=>{if(e.target===$('playerDialog'))closePlayer()});
 $('closePlayer').onclick=closePlayer;

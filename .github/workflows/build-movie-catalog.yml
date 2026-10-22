@@ -1,0 +1,38 @@
+name: Build source-linked movie catalog
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_movie_catalog.py'
+      - '.github/workflows/build-movie-catalog.yml'
+permissions:
+  contents: write
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - run: python scripts/build_movie_catalog.py
+      - name: Check records
+        run: |
+          python - <<'PY'
+          import json, re
+          d=json.load(open('catalog.json'))
+          a=d['movies']
+          assert len(a)>=10
+          assert len({m['id'] for m in a})==len(a)
+          assert all(re.fullmatch(r'[A-Za-z0-9_-]{11}', m['id']) for m in a)
+          print('PASS:',len(a),'direct YouTube IDs')
+          PY
+      - name: Commit resulting catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json
+          git diff --cached --quiet || (git commit -m "Import source-linked YouTube film catalog" && git push)

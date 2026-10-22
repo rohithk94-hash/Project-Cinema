@@ -1,0 +1,300 @@
+{
+  "checked_at": "2026-10-22T04:09:41.277330+00:00",
+  "disclaimer": "YouTube oEmbed metadata does not establish full-length runtime, third-party iframe permission, US geo-availability or successful playback. HTTP failures are inconclusive.",
+  "count": 36,
+  "metadata_summary": {
+    "source_channel_confirmed": 32,
+    "metadata_http_403": 3,
+    "source_channel_mismatch": 1
+  },
+  "checks": [
+    {
+      "id": "zjIiApN6cfg",
+      "title": "Come and See",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "TGRDYpCmMcM",
+      "title": "Stalker",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "metadata_http_403",
+      "actual_uploader": null,
+      "http_status": 403
+    },
+    {
+      "id": "12WwlJYarow",
+      "title": "Zero City",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "g22ux0aiCI4",
+      "title": "The Tale of Tsar Saltan",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "metadata_http_403",
+      "actual_uploader": null,
+      "http_status": 403
+    },
+    {
+      "id": "uopfqauEz64",
+      "title": "Ilya Muromets",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "EYHv8eJrW2Y",
+      "title": "Kin-dza-dza!",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "zedi4fgeMeI",
+      "title": "Sadko",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "Amh3uudVMBo",
+      "title": "Viy",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "5aK0KP27iqg",
+      "title": "Moon Rainbow",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "metadata_http_403",
+      "actual_uploader": null,
+      "http_status": 403
+    },
+    {
+      "id": "K3CSWhXOB6k",
+      "title": "The Invisible Man",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "qiGDJ5-dXaI",
+      "title": "White Tiger",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "8tJPKSz6Gaw",
+      "title": "Gentlemen of Fortune",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "v21lQ449T3Y",
+      "title": "The Ascent",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "8zooDjp0VrE",
+      "title": "Ballad of a Soldier",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "2OccZQmxKac",
+      "title": "The Cranes Are Flying",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "m3n4LptYWNo",
+      "title": "Operation Y and Shurik's Other Adventures",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "CLjLLHDUiiA",
+      "title": "Love and Doves",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "MkHiu9fD820",
+      "title": "The Diamond Arm",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "TxrtUnWBCeI",
+      "title": "Carnival Night",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "NTWA_7-ld_U",
+      "title": "Moscow Does Not Believe in Tears",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "a-RLbCXVvwI",
+      "title": "The Red Snowball Tree",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "TQ8onQu5QKY",
+      "title": "Ivan Vasilyevich Changes His Profession",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "GqnqFhc9aho",
+      "title": "White Sun of the Desert",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "8CYY8EM5xYE",
+      "title": "The Girls",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Киноконцерн \"Мосфильм\"",
+      "http_status": 200
+    },
+    {
+      "id": "LfxIfK8ThFc",
+      "title": "Aimless Bullet",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "4PvzT5WnNrA",
+      "title": "The March of Fools",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "k-n3W8OXaY8",
+      "title": "Sopyonje",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "L5kaUIuqKFo",
+      "title": "The Widow",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "yz0I-OdnlMQ",
+      "title": "The General's Mustache",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "UqqB0HUFmUU",
+      "title": "The Coachman",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "Fl-ns4OVC2g",
+      "title": "Whale Hunting",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "Drz_bK4GkTE",
+      "title": "The Road to Sampo",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "nN_pbS1FzSE",
+      "title": "Yeong-ja's Heydays",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "OcJ24yKEI_E",
+      "title": "The Flower in Hell",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_mismatch",
+      "actual_uploader": "NipponKino",
+      "http_status": 200
+    },
+    {
+      "id": "8rrBUUWRlwc",
+      "title": "The Marines Who Never Returned",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    },
+    {
+      "id": "e2AHAmicRTQ",
+      "title": "The Man with Three Coffins",
+      "expected_uploader": "Korean Film Archive",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "한국고전영화 Korean Classic Film",
+      "http_status": 200
+    }
+  ]
+}

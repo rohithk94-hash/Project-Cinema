@@ -1,0 +1,716 @@
+{
+  "schema_version": 1,
+  "editorial_policy": "Subjective initial curation guidance. Appeal values of 1-5 are non-scientific editorial estimates, NOT viewer ratings, audience reviews, or verified quality metrics. The title and source must be checked before promoting any movie.",
+  "dimensions": [
+    {
+      "id": "spectacle",
+      "label": "Visual Spectacle",
+      "description": "Cinematography, effects, action scale and production design"
+    },
+    {
+      "id": "story",
+      "label": "Story & Drama",
+      "description": "Premise, writing, stakes and emotional narrative"
+    },
+    {
+      "id": "entertainment",
+      "label": "Pure Entertainment",
+      "description": "Pacing, fun, humor and watchability"
+    }
+  ],
+  "experiences": [
+    "Visual Spectacle",
+    "High-Stakes Drama",
+    "Nonstop Action",
+    "Edge-of-Your-Seat",
+    "Mind-Bending",
+    "Laugh-Out-Loud",
+    "Emotional Rollercoaster",
+    "Epic & Immersive",
+    "Dark & Chilling",
+    "Feel-Good",
+    "Great Storytelling"
+  ],
+  "movies": {
+    "Come and See": {
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Dark & Chilling",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "War seen through a child's eyes; emotionally overwhelming"
+    },
+    "Zero City": {
+      "genres": [
+        "Mystery",
+        "Comedy"
+      ],
+      "experiences": [
+        "Mind-Bending",
+        "Edge-of-Your-Seat",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "An absurd mystery where reality keeps shifting"
+    },
+    "Ilya Muromets": {
+      "genres": [
+        "Fantasy",
+        "Adventure"
+      ],
+      "experiences": [
+        "Visual Spectacle",
+        "Epic & Immersive",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 3,
+        "entertainment": 4
+      },
+      "hook": "Mythic warriors, giant sets and sweeping fantasy"
+    },
+    "Kin-dza-dza!": {
+      "genres": [
+        "Sci-Fi",
+        "Comedy"
+      ],
+      "experiences": [
+        "Mind-Bending",
+        "Epic & Immersive",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "Inventive science-fiction satire in an alien world"
+    },
+    "Sadko": {
+      "genres": [
+        "Fantasy",
+        "Adventure"
+      ],
+      "experiences": [
+        "Visual Spectacle",
+        "Epic & Immersive"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 3,
+        "entertainment": 4
+      },
+      "hook": "Vibrant mythological fantasy and an epic journey"
+    },
+    "Viy": {
+      "genres": [
+        "Horror",
+        "Fantasy"
+      ],
+      "experiences": [
+        "Dark & Chilling",
+        "Edge-of-Your-Seat",
+        "Visual Spectacle"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "A supernatural nightmare with striking practical effects"
+    },
+    "The Invisible Man": {
+      "genres": [
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "experiences": [
+        "Mind-Bending",
+        "Edge-of-Your-Seat",
+        "Dark & Chilling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "Classic high-concept science fiction"
+    },
+    "White Tiger": {
+      "genres": [
+        "War",
+        "Action",
+        "Fantasy"
+      ],
+      "experiences": [
+        "Visual Spectacle",
+        "Nonstop Action",
+        "High-Stakes Drama",
+        "Epic & Immersive"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 3,
+        "entertainment": 4
+      },
+      "hook": "Tank battles and a war-film mystery"
+    },
+    "Gentlemen of Fortune": {
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "Fast-moving criminal comedy"
+    },
+    "The Ascent": {
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Dark & Chilling",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "Moral choices and overwhelming wartime tension"
+    },
+    "Ballad of a Soldier": {
+      "genres": [
+        "Drama",
+        "War",
+        "Romance"
+      ],
+      "experiences": [
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "An intimate journey through war and love"
+    },
+    "Solaris": {
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "experiences": [
+        "Mind-Bending",
+        "Epic & Immersive",
+        "Visual Spectacle",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "Deep-space mystery and profound ideas"
+    },
+    "Mirror": {
+      "genres": [
+        "Drama"
+      ],
+      "experiences": [
+        "Mind-Bending",
+        "Emotional Rollercoaster",
+        "Visual Spectacle"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 4,
+        "entertainment": 3
+      },
+      "hook": "Dreamlike images and poetic memories"
+    },
+    "Andrei Rublev": {
+      "genres": [
+        "Drama",
+        "Historical"
+      ],
+      "experiences": [
+        "Visual Spectacle",
+        "Epic & Immersive",
+        "High-Stakes Drama",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "A sweeping medieval epic about art and survival"
+    },
+    "Afonya": {
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "A flawed but endearing everyman comedy"
+    },
+    "The Cranes Are Flying": {
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Visual Spectacle",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 5,
+        "entertainment": 5
+      },
+      "hook": "Soaring camera work and devastating romance"
+    },
+    "Operation Y and Shurik's Other Adventures": {
+      "genres": [
+        "Comedy"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "Energetic comic mishaps and slapstick"
+    },
+    "Love and Doves": {
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good",
+        "Emotional Rollercoaster"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "Chaotic romantic comedy with heart"
+    },
+    "The Diamond Arm": {
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "A lively caper and mistaken-identity comedy"
+    },
+    "Carnival Night": {
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 3,
+        "entertainment": 5
+      },
+      "hook": "Bright musical comedy and celebratory energy"
+    },
+    "Moscow Does Not Believe in Tears": {
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 5,
+        "entertainment": 5
+      },
+      "hook": "Ambitious women, big life changes and romance"
+    },
+    "The Red Snowball Tree": {
+      "genres": [
+        "Drama"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "An emotionally charged story of redemption"
+    },
+    "Ivan Vasilyevich Changes His Profession": {
+      "genres": [
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Mind-Bending",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "Time-travel comedy with chaotic energy"
+    },
+    "White Sun of the Desert": {
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "experiences": [
+        "Nonstop Action",
+        "High-Stakes Drama",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "Frontier adventure with action and dry humor"
+    },
+    "The Girls": {
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Feel-Good",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 5
+      },
+      "hook": "Sparky romance and workplace humor"
+    },
+    "Aimless Bullet": {
+      "genres": [
+        "Drama"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "An intense portrait of postwar hardship"
+    },
+    "The March of Fools": {
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "experiences": [
+        "Laugh-Out-Loud",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "Youthful satire, absurdity and social comedy"
+    },
+    "Sopyonje": {
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "experiences": [
+        "Emotional Rollercoaster",
+        "Epic & Immersive",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "A sweeping musical drama about sacrifice"
+    },
+    "The Widow": {
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 3
+      },
+      "hook": "A restrained portrait of love and loss"
+    },
+    "The General's Mustache": {
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "experiences": [
+        "Edge-of-Your-Seat",
+        "Dark & Chilling",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "Investigation and psychological tension"
+    },
+    "The Coachman": {
+      "genres": [
+        "Drama"
+      ],
+      "experiences": [
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "An intimate family drama"
+    },
+    "Whale Hunting": {
+      "genres": [
+        "Drama",
+        "Adventure"
+      ],
+      "experiences": [
+        "Epic & Immersive",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "A restless journey of outsider friendship"
+    },
+    "The Road to Sampo": {
+      "genres": [
+        "Drama"
+      ],
+      "experiences": [
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "Atmospheric road journey and human connection"
+    },
+    "Yeong-ja's Heydays": {
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "experiences": [
+        "High-Stakes Drama",
+        "Emotional Rollercoaster",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 5,
+        "entertainment": 4
+      },
+      "hook": "Personal survival and social melodrama"
+    },
+    "The Marines Who Never Returned": {
+      "genres": [
+        "War",
+        "Action"
+      ],
+      "experiences": [
+        "Nonstop Action",
+        "High-Stakes Drama",
+        "Epic & Immersive",
+        "Visual Spectacle"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "A wartime mission with battle sequences"
+    },
+    "The Man with Three Coffins": {
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "experiences": [
+        "Edge-of-Your-Seat",
+        "Dark & Chilling",
+        "Great Storytelling"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 4,
+        "entertainment": 4
+      },
+      "hook": "A surreal mystery and unsettling voyage"
+    },
+    "American Hero": {
+      "genres": [
+        "Action",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "experiences": [
+        "Nonstop Action",
+        "Laugh-Out-Loud",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 3,
+        "entertainment": 4
+      },
+      "hook": "A superhero with problems and a second chance"
+    },
+    "Khumba": {
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family"
+      ],
+      "experiences": [
+        "Visual Spectacle",
+        "Epic & Immersive",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 5,
+        "story": 3,
+        "entertainment": 5
+      },
+      "hook": "Colorful animated adventure with a big-hearted journey"
+    },
+    "Convict": {
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "experiences": [
+        "Nonstop Action",
+        "Edge-of-Your-Seat",
+        "High-Stakes Drama",
+        "Dark & Chilling"
+      ],
+      "appeal": {
+        "spectacle": 3,
+        "story": 3,
+        "entertainment": 4
+      },
+      "hook": "Hard-edged survival behind bars"
+    },
+    "Charade": {
+      "genres": [
+        "Mystery",
+        "Romance",
+        "Comedy",
+        "Thriller"
+      ],
+      "experiences": [
+        "Edge-of-Your-Seat",
+        "Great Storytelling",
+        "Feel-Good"
+      ],
+      "appeal": {
+        "spectacle": 4,
+        "story": 5,
+        "entertainment": 5
+      },
+      "hook": "Hollywood star power in a stylish romantic mystery"
+    }
+  }
+}

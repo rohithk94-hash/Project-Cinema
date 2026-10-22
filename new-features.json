@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-21",
+  "description": "Handpicked additional features from FilmRise and Indie Rights. 4 full-movie publisher uploads whose channel and video title are confirmed by YouTube oEmbed. US iframe playback remains untested.",
+  "sources": [
+    "https://tvtube.app/",
+    "https://www.filmrise.com/about-us",
+    "https://www.youtube.com/t/terms"
+  ],
+  "movies": [
+    {
+      "id": "B_-1AYf3CLU",
+      "title": "American Hero",
+      "year": 2015,
+      "country": "United States",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "archive": "FilmRise",
+      "uploader": "FilmRise Movies",
+      "source_url": "https://www.youtube.com/watch?v=B_-1AYf3CLU",
+      "source_name": "FilmRise Movies full-movie upload",
+      "source_provenance": "YouTube oEmbed metadata confirmed FilmRise Movies and full-movie title on 2026-10-21",
+      "provenance": "FilmRise distributor upload",
+      "curated_score": 65,
+      "runtime_minutes": 86,
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "uploader_title_says_full_movie",
+      "tags": [
+        "United States",
+        "Modern cinema",
+        "Superheroes"
+      ]
+    },
+    {
+      "id": "tf7sVfOjWYU",
+      "title": "Khumba",
+      "year": 2013,
+      "country": "South Africa",
+      "genre": "Adventure",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "archive": "FilmRise",
+      "uploader": "FilmRise Movies",
+      "source_url": "https://www.youtube.com/watch?v=tf7sVfOjWYU",
+      "source_name": "FilmRise Movies full-movie upload",
+      "source_provenance": "YouTube oEmbed metadata confirmed FilmRise Movies and full-movie title on 2026-10-21",
+      "provenance": "FilmRise distributor upload",
+      "curated_score": 81,
+      "runtime_minutes": 85,
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "uploader_title_says_full_movie",
+      "tags": [
+        "South Africa",
+        "Animation",
+        "Family"
+      ]
+    },
+    {
+      "id": "6JLzLZnnO88",
+      "title": "Convict",
+      "year": 2014,
+      "country": "Australia",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "archive": "Indie Rights",
+      "uploader": "Indie Rights Movies For Free",
+      "source_url": "https://www.youtube.com/watch?v=6JLzLZnnO88",
+      "source_name": "Indie Rights Movies For Free full-movie upload",
+      "source_provenance": "YouTube oEmbed metadata confirmed Indie Rights Movies For Free and full-movie title on 2026-10-21",
+      "provenance": "Licensed distributor channel upload",
+      "curated_score": 67,
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "uploader_title_says_full_movie",
+      "tags": [
+        "Australia",
+        "Prison",
+        "Crime"
+      ]
+    },
+    {
+      "id": "6ROvPFaUl80",
+      "title": "Charade",
+      "year": 1963,
+      "country": "United States",
+      "genre": "Mystery",
+      "genres": [
+        "Mystery",
+        "Romance",
+        "Comedy"
+      ],
+      "archive": "FilmRise",
+      "uploader": "FilmRise Movies",
+      "source_url": "https://www.youtube.com/watch?v=6ROvPFaUl80",
+      "source_name": "FilmRise Movies full-movie upload",
+      "source_provenance": "YouTube oEmbed metadata confirmed FilmRise Movies and full-movie title on 2026-10-21",
+      "provenance": "FilmRise distributor upload",
+      "curated_score": 85,
+      "runtime_minutes": 113,
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "uploader_title_says_full_movie",
+      "tags": [
+        "United States",
+        "Mystery",
+        "Hollywood stars"
+      ]
+    }
+  ]
+}

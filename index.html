@@ -164,7 +164,7 @@ function showHeroAt(index){
 }
 function startHeroRotation(){
  clearInterval(heroTimer);
- if(reduceMotion||document.hidden||heroPaused||heroSelection.length<2)return;
+ if(document.hidden||heroPaused||$('playerDialog').open||heroSelection.length<2)return;
  heroTimer=setInterval(()=>showHeroAt(heroIndex+1),6500);
 }
 function setupHeroRotation(){
@@ -177,8 +177,9 @@ function setupHeroRotation(){
  heroSelection.forEach((m,i)=>{const dot=button('','hero-dot',()=>{showHeroAt(i);startHeroRotation()});dot.setAttribute('aria-label','Feature '+m.title);dot.setAttribute('aria-current',String(i===heroIndex));dots.append(dot)});
  if(heroSelection.length){hero(heroSelection[0],false);startHeroRotation()}
 }
-$('home').addEventListener('mouseenter',()=>{heroPaused=true;clearInterval(heroTimer)});
-$('home').addEventListener('mouseleave',()=>{heroPaused=false;startHeroRotation()});
+// Keep rotation running while the mouse rests over the hero. The previous
+// mouseenter handler froze the carousel for anyone whose cursor was there.
+// Only explicit keyboard focus or an open movie player pauses the slideshow.
 $('home').addEventListener('focusin',()=>{heroPaused=true;clearInterval(heroTimer)});
 $('home').addEventListener('focusout',e=>{if(!$('home').contains(e.relatedTarget)){heroPaused=false;startHeroRotation()}});
 document.addEventListener('visibilitychange',startHeroRotation);
@@ -194,12 +195,12 @@ function play(m){
  frame.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(m.id)+'?autoplay=1&controls=1&rel=0&playsinline=1&fs=1';
  frame.allow='autoplay; fullscreen; encrypted-media; picture-in-picture; accelerometer; gyroscope; clipboard-write';
  frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;
- box.append(frame);$('playerDialog').showModal();
+ box.append(frame);$('playerDialog').showModal();clearInterval(heroTimer);
  const old=profile.played[m.id]||{count:0};profile.played[m.id]={count:Math.min(999,(old.count||0)+1),last:Date.now()};persist();
 }
 function closePlayer(){$('videoWrap').replaceChildren();if($('playerDialog').open)$('playerDialog').close()}
 $('playerDialog').addEventListener('cancel',()=>{$('videoWrap').replaceChildren()});
-$('playerDialog').addEventListener('close',()=>{$('videoWrap').replaceChildren();render();if(lastFocused&&lastFocused.isConnected)lastFocused.focus({preventScroll:true})});
+$('playerDialog').addEventListener('close',()=>{$('videoWrap').replaceChildren();startHeroRotation();render();if(lastFocused&&lastFocused.isConnected)lastFocused.focus({preventScroll:true})});
 $('playerDialog').addEventListener('click',e=>{if(e.target===$('playerDialog'))closePlayer()});
 $('closePlayer').onclick=closePlayer;
 $('heroPlay').onclick=()=>play(featured);$('heroSave').onclick=()=>toggle('saved',featured.id);

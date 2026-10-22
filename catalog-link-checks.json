@@ -1,10 +1,9 @@
 {
-  "checked_at": "2026-10-22T04:13:03.733779+00:00",
+  "checked_at": "2026-10-22T04:15:16.826127+00:00",
   "disclaimer": "YouTube oEmbed metadata does not establish full-length runtime, third-party iframe permission, US geo-availability or successful playback. HTTP failures are inconclusive.",
   "count": 36,
   "metadata_summary": {
-    "source_channel_confirmed": 33,
-    "metadata_http_403": 3
+    "source_channel_confirmed": 36
   },
   "checks": [
     {
@@ -16,28 +15,12 @@
       "http_status": 200
     },
     {
-      "id": "TGRDYpCmMcM",
-      "title": "Stalker",
-      "expected_uploader": "Mosfilm",
-      "metadata_status": "metadata_http_403",
-      "actual_uploader": null,
-      "http_status": 403
-    },
-    {
       "id": "12WwlJYarow",
       "title": "Zero City",
       "expected_uploader": "Mosfilm",
       "metadata_status": "source_channel_confirmed",
       "actual_uploader": "Киноконцерн \"Мосфильм\"",
       "http_status": 200
-    },
-    {
-      "id": "g22ux0aiCI4",
-      "title": "The Tale of Tsar Saltan",
-      "expected_uploader": "Mosfilm",
-      "metadata_status": "metadata_http_403",
-      "actual_uploader": null,
-      "http_status": 403
     },
     {
       "id": "uopfqauEz64",
@@ -70,14 +53,6 @@
       "metadata_status": "source_channel_confirmed",
       "actual_uploader": "Киноконцерн \"Мосфильм\"",
       "http_status": 200
-    },
-    {
-      "id": "5aK0KP27iqg",
-      "title": "Moon Rainbow",
-      "expected_uploader": "Mosfilm",
-      "metadata_status": "metadata_http_403",
-      "actual_uploader": null,
-      "http_status": 403
     },
     {
       "id": "K3CSWhXOB6k",
@@ -114,6 +89,30 @@
     {
       "id": "8zooDjp0VrE",
       "title": "Ballad of a Soldier",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "Z8ZhQPaw4rE",
+      "title": "Solaris",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "NrMINC5xjMs",
+      "title": "Mirror",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "je75FDjcUP4",
+      "title": "Andrei Rublev",
       "expected_uploader": "Mosfilm",
       "metadata_status": "source_channel_confirmed",
       "actual_uploader": "Mosfilm",

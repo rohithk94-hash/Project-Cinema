@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#09090c">
-<meta name="description" content="Project Cinema — a handpicked collection of full-length films shared by film studios and archives on YouTube.">
+<meta name="description" content="Discover great movies from Hollywood and around the world by genre and experience: visual spectacle, gripping story or pure entertainment.">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Project Cinema — Great films, one click away</title>
 <style>
@@ -26,21 +26,39 @@ dialog{color:var(--fg);background:#15161b;border:1px solid #ffffff30;border-radi
 @media(max-width:850px){.topnav{display:none}.library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{min-height:585px;height:70vw}.hero-content{padding-top:110px}.hero-stat{display:none}.hero-dots{bottom:55px}.spotlight{align-items:flex-start}.spotlight a{margin-left:0}.spotlight{flex-wrap:wrap}}
 @media(max-width:620px){.topbar{height:62px}.brand{font-size:1.23rem}.top-actions .watchlist-cta{display:none}.hero{min-height:570px;height:90svh;max-height:750px}.hero-art{background-position:center center!important}.hero::before{background:linear-gradient(90deg,#09090cf0,#09090c45 88%),linear-gradient(0deg,#09090c 0%,transparent 73%)}.hero-content{padding:105px 20px 100px;justify-content:flex-end}.hero h1{font-size:clamp(3.3rem,12vw,5rem)}.hero-description{font-size:.87rem}.hero-actions .btn{padding:10px 13px;min-height:43px;font-size:.82rem}main{margin-top:-42px}.section-head{align-items:start}.row-controls{display:none}.rail{grid-auto-columns:75vw;gap:12px}.library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card-bottom{padding:10px}.card-name{font-size:.87rem}.card-meta{font-size:.65rem}.card-footer{flex-wrap:wrap}.watch-cta{font-size:.7rem;padding:7px}.mini-action{width:32px;height:30px}.section-title{font-size:1.25rem}.search-field{min-width:100%;max-width:none}.spotlight{padding:16px;margin-bottom:29px}.spotlight strong{font-size:.9rem}.spotlight p{font-size:.76rem}footer{flex-direction:column;padding-bottom:32px}.play-circle{opacity:1;width:45px;height:45px}.modal-head{padding:11px 13px}.modal-head h2{font-size:.97rem}.modal-foot{padding:11px 13px}dialog{border-radius:9px}.player-dialog{width:calc(100vw - 10px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+.mood-label{color:#c8a9d6;font-size:.67rem;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:7px}
+.mood-hub{margin:2px 0 35px;scroll-margin-top:70px}
+.mood-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.mood-tile{position:relative;min-height:137px;padding:20px;text-align:left;border-radius:14px;display:flex;flex-direction:column;justify-content:end;gap:5px;color:white;border:1px solid #ffffff2a;overflow:hidden;transition:transform .15s,border .15s,filter .15s}
+.mood-tile:hover{transform:translateY(-3px);border-color:#ffffff90;filter:brightness(1.15)}.mood-tile[aria-pressed=true]{outline:2px solid #ffe1aa;outline-offset:2px}
+.mood-tile strong{font-size:clamp(.95rem,1.45vw,1.25rem);font-weight:850;letter-spacing:-.035em;z-index:1}
+.mood-tile small{font-size:.73rem;color:#f3f0f0cc;z-index:1}.mood-symbol{position:absolute;right:12px;top:-9px;font-size:5.3rem;opacity:.22;line-height:1}
+.spectacle-tile{background:linear-gradient(130deg,#502a6c,#111e39)}.drama-tile{background:linear-gradient(130deg,#642e36,#231822)}
+.action-tile{background:linear-gradient(125deg,#634024,#222025)}.thrill-tile{background:linear-gradient(125deg,#234957,#1c1d2c)}
+.mind-tile{background:linear-gradient(125deg,#383d74,#161a38)}.fun-tile{background:linear-gradient(125deg,#73502e,#37273d)}
+.filter-group{margin:8px 0 9px}.filter-label{font-size:.78rem;font-weight:750;color:#bdbdc6;display:block;margin:8px 0 12px}
+.focus-panel{margin:15px 0 20px;padding:17px 20px;border:1px solid #ffffff16;background:linear-gradient(100deg,#221c29,#16181c);border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.focus-panel strong{font-size:.87rem}.focus-panel p{font-size:.73rem;line-height:1.5;color:#a9aab6;margin:4px 0 0}
+.focus-choices{display:flex;flex-wrap:wrap;gap:7px}.focus-chip{padding:10px 13px;border-radius:8px;color:#e7e7ed;background:#2e2f36;border:1px solid #ffffff25;font-size:.77rem;font-weight:700;white-space:nowrap}
+.focus-chip[aria-pressed=true]{background:#f9f5f0;border-color:#fff;color:#131319}.focus-chip:hover{border-color:#ffffff91}
+@media(max-width:850px){.mood-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-panel{align-items:stretch;flex-direction:column}}
+@media(max-width:620px){.mood-grid{gap:8px}.mood-tile{min-height:130px;padding:13px}.mood-tile strong{font-size:.92rem}.mood-tile small{font-size:.67rem}.mood-symbol{font-size:4rem}.focus-panel{padding:14px}.focus-chip{font-size:.7rem;padding:9px 10px}}
 </style>
 </head>
 <body>
 <header class="topbar">
  <a class="brand" href="#home" aria-label="Project Cinema home">CINEMA<span>+</span></a>
- <nav class="topnav" aria-label="Main navigation"><a href="#home">Home</a><a href="#for-you">For you</a><a href="#library">All films</a><a href="#library" id="navSaved">My list</a></nav>
+ <nav class="topnav" aria-label="Main navigation"><a href="#home">Home</a><a href="#mood-hub">Find your vibe</a><a href="#for-you">For you</a><a href="#library">All films</a><a href="#library" id="navSaved">My list</a></nav>
  <div class="top-actions"><button class="icon-btn" id="focusSearch" aria-label="Search films" title="Search films">⌕</button><button class="watchlist-cta" id="headerSaved">♡ My list <span id="listCount"></span></button><button class="icon-btn" id="openAdd" aria-label="Add a YouTube film" title="Add a YouTube film">＋</button></div>
 </header>
 <section class="hero" id="home">
  <div class="hero-art" id="heroArt" role="img" aria-label="Featured movie artwork"></div><div class="hero-art-next" id="heroArtNext" aria-hidden="true"></div>
  <div class="hero-content">
-  <div class="hero-label">CINEMA+ ORIGINAL PICKS · WATCH FREE</div>
+  <div class="hero-label">GREAT MOVIES · NO BOUNDARIES</div>
   <h1 id="heroTitle">Cinema+ Picks</h1>
   <div class="hero-meta" id="heroMeta"><span>Handpicked movies</span></div>
-  <p class="hero-description" id="heroDescription">A world of cinema, one movie at a time. Discover your next favorite film.</p>
+  <p class="hero-description" id="heroDescription">Spectacle. Story. Entertainment. From everywhere.</p>
   <div class="hero-actions">
    <button class="btn primary" id="heroPlay">▶ Play film</button>
    <button class="btn ghost" id="heroSave" aria-pressed="false">＋ My list</button>
@@ -50,18 +68,34 @@ dialog{color:var(--fg);background:#15161b;border:1px solid #ffffff30;border-radi
  <div class="hero-dots" id="heroDots" role="group" aria-label="Featured films"></div><div class="hero-stat"><span id="heroCount">Film collection</span><br>Full-length film links · YouTube</div>
 </section>
 <main>
+ <section id="mood-hub" class="mood-hub" aria-labelledby="moodHeading">
+ <div class="section-head"><div><h2 class="section-title" id="moodHeading">What are you in the mood for?</h2><p class="section-sub">Don't choose a country or a decade. Choose how you want the movie to feel.</p></div></div>
+ <div class="mood-grid">
+  <button type="button" class="mood-tile spectacle-tile" data-experience="Visual Spectacle"><span class="mood-symbol" aria-hidden="true">✦</span><strong>Visual spectacle</strong><small>Wow me with the visuals</small></button>
+  <button type="button" class="mood-tile drama-tile" data-experience="High-Stakes Drama"><span class="mood-symbol" aria-hidden="true">◈</span><strong>High-stakes drama</strong><small>Big emotions and bigger consequences</small></button>
+  <button type="button" class="mood-tile action-tile" data-experience="Nonstop Action"><span class="mood-symbol" aria-hidden="true">⚡</span><strong>Nonstop action</strong><small>Adrenaline, battles and momentum</small></button>
+  <button type="button" class="mood-tile thrill-tile" data-experience="Edge-of-Your-Seat"><span class="mood-symbol" aria-hidden="true">⌁</span><strong>Edge-of-your-seat</strong><small>Keep me guessing</small></button>
+  <button type="button" class="mood-tile mind-tile" data-experience="Mind-Bending"><span class="mood-symbol" aria-hidden="true">◎</span><strong>Mind-bending</strong><small>Surprise my imagination</small></button>
+  <button type="button" class="mood-tile fun-tile" data-experience="Laugh-Out-Loud"><span class="mood-symbol" aria-hidden="true">✳</span><strong>Laugh-out-loud</strong><small>Give me a genuinely fun time</small></button>
+ </div>
+ </section>
  <section class="row-section" id="for-you"><div class="section-head"><div><h2 class="section-title" id="personalTitle">Selected for you</h2><p class="section-sub" id="personalDesc">Picks based on your favorite genres and the films you explore</p></div><div class="row-controls"><button class="arrow" data-rail="personalRail" data-dir="-1" aria-label="Scroll recommendations left">‹</button><button class="arrow" data-rail="personalRail" data-dir="1" aria-label="Scroll recommendations right">›</button></div></div><div class="rail" id="personalRail"><div class="loading">Curating your movie night…</div></div></section>
  <section class="row-section" id="editors-row"><div class="section-head"><div><h2 class="section-title">Curated by Cinema+</h2><p class="section-sub">Remarkable films worth discovering</p></div><div class="row-controls"><button class="arrow" data-rail="editorsRail" data-dir="-1" aria-label="Scroll curated films left">‹</button><button class="arrow" data-rail="editorsRail" data-dir="1" aria-label="Scroll curated films right">›</button></div></div><div class="rail" id="editorsRail"></div></section>
- <section class="spotlight"><div class="spotlight-icon">✦</div><div><strong>Great cinema, without another subscription.</strong><p>Explore direct YouTube videos linked by studios and film archives. Click a film to open the full-screen-capable player right here. Availability can differ by country, and YouTube may restrict autoplay or embedding.</p></div><a href="#library">Explore the library →</a></section>
+ <section class="row-section" id="spectacle-row"><div class="section-head"><div><h2 class="section-title">Big-screen spectacle</h2><p class="section-sub">Daring visuals, imaginative worlds and epic production</p></div><div class="row-controls"><button class="arrow" data-rail="spectacleRail" data-dir="-1" aria-label="Scroll spectacle movies left">‹</button><button class="arrow" data-rail="spectacleRail" data-dir="1" aria-label="Scroll spectacle movies right">›</button></div></div><div class="rail" id="spectacleRail"></div></section>
+ <section class="row-section" id="drama-row"><div class="section-head"><div><h2 class="section-title">Drama turned all the way up</h2><p class="section-sub">High stakes, huge emotions and stories that stay with you</p></div><div class="row-controls"><button class="arrow" data-rail="dramaRail" data-dir="-1" aria-label="Scroll high-stakes dramas left">‹</button><button class="arrow" data-rail="dramaRail" data-dir="1" aria-label="Scroll high-stakes dramas right">›</button></div></div><div class="rail" id="dramaRail"></div></section>
+ <section class="spotlight"><div class="spotlight-icon">✦</div><div><strong>Great movies. No boundaries.</strong><p>Hollywood, India, South Korea, Europe, Africa and beyond. We look for spectacle, storytelling and pure entertainment regardless of release year. Every film has a publisher-linked full-movie player; availability still depends on YouTube.</p></div><a href="#library">Explore all films →</a></section>
+ <section class="row-section" id="fun-row"><div class="section-head"><div><h2 class="section-title">Laugh-out-loud favorites</h2><p class="section-sub">Fun, high-energy movies with character</p></div><div class="row-controls"><button class="arrow" data-rail="funRail" data-dir="-1" aria-label="Scroll comedies left">‹</button><button class="arrow" data-rail="funRail" data-dir="1" aria-label="Scroll comedies right">›</button></div></div><div class="rail" id="funRail"></div></section>
  <section class="row-section" id="world-row"><div class="section-head"><div><h2 class="section-title">World cinema discoveries</h2><p class="section-sub">Korean Film Archive and other lesser-known treasures</p></div><div class="row-controls"><button class="arrow" data-rail="worldRail" data-dir="-1" aria-label="Scroll world films left">‹</button><button class="arrow" data-rail="worldRail" data-dir="1" aria-label="Scroll world films right">›</button></div></div><div class="rail" id="worldRail"></div></section>
  <section class="row-section" id="recent-row" hidden><div class="section-head"><div><h2 class="section-title">Recently played</h2><p class="section-sub">Pick up something you discovered earlier</p></div></div><div class="rail" id="recentRail"></div></section>
  <section id="library" class="library-header">
   <div class="section-head"><div><h2 class="section-title" id="libraryTitle">All films</h2><p class="section-sub" id="librarySubtitle">Every title has a direct YouTube video link</p></div><span id="totalCount" class="status-line"></span></div>
-  <div class="library-controls"><input id="search" class="search-field" type="search" placeholder="Search films, years, genres, or studios…" aria-label="Search movie catalog"><select id="sort" class="sort-select" aria-label="Sort movies"><option value="recommended">Recommended</option><option value="az">Title A–Z</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
-  <div class="chips" id="chips" role="group" aria-label="Filter movies"></div>
+  <div class="focus-panel"><div><strong>What matters most tonight?</strong><p>Fine-tune the recommendations using spectacle, story or entertainment. These are editorial taste estimates, not viewer ratings.</p></div><div id="focusChoices" class="focus-choices" role="group" aria-label="Prioritize a movie quality"></div></div>
+  <div class="library-controls"><input id="search" class="search-field" type="search" placeholder="Search movies, moods, genres, actors or studios…" aria-label="Search movie catalog"><select id="sort" class="sort-select" aria-label="Sort movies"><option value="recommended">Recommended</option><option value="az">Title A–Z</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
+  <div class="filter-group"><span class="filter-label">Browse by genre</span><div class="chips" id="chips" role="group" aria-label="Filter movie genres"></div></div>
+  <div class="filter-group"><span class="filter-label">Browse by experience</span><div class="chips" id="experienceChips" role="group" aria-label="Filter movie experiences"></div></div>
   <div class="library-grid" id="libraryGrid" aria-live="polite"><div class="loading">Loading cinema collection…</div></div>
   <div class="no-results" id="noResults" hidden>No films match your search. Try another title or category.</div>
-  <p class="status-line" id="verificationNote">Movie links are sourced from archive and studio listings; playback still depends on YouTube and location. Browser playback of every title has not been independently tested.</p>
+  <p class="status-line" id="verificationNote">Movies link to publisher-uploaded full-film videos. Publisher and title metadata are confirmed for the newest additions, but third-party embedding and US playback have not been verified film by film. YouTube may restrict availability.</p>
  </section>
 </main>
 <footer><div><strong>PROJECT CINEMA</strong><div>Created for the love of movies. Independent, free, and not affiliated with YouTube, Mosfilm, KOFA or Netflix.</div></div><div>Official archive and studio links are credited in each player's details. No proxy streaming, downloads, or DRM workarounds. The collection is a set of linked video candidates, not a guarantee of US availability.</div></footer>

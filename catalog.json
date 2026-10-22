@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-22T04:12:27Z",
+  "generated_at": "2026-10-22T04:14:38Z",
   "note": "Every record has a direct YouTube video ID linked by an editorial source. Browser playback, region and embedding are NOT independently verified. Autoplay only begins after user clicks.",
   "channel_sources": [
     "https://www.youtube.com/@Mosfilm_eng",
@@ -30,28 +30,6 @@
       "curated_score": 80
     },
     {
-      "id": "TGRDYpCmMcM",
-      "title": "Stalker",
-      "year": 1979,
-      "genre": "Sci-Fi",
-      "runtime_minutes": null,
-      "provider": "YouTube",
-      "uploader": "Mosfilm",
-      "archive": "Mosfilm",
-      "watch_url": "https://www.youtube.com/watch?v=TGRDYpCmMcM",
-      "source_url": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
-      "source_name": "Mosfilm studio or linked cinema source",
-      "provenance": "Third-party index attributes link to Mosfilm",
-      "embed_status": "requires_browser_test",
-      "us_availability": "unverified",
-      "full_length_status": "attributed_full_film_unchecked",
-      "tags": [
-        "Soviet cinema",
-        "Archive"
-      ],
-      "curated_score": 80
-    },
-    {
       "id": "12WwlJYarow",
       "title": "Zero City",
       "year": 1988,
@@ -61,28 +39,6 @@
       "uploader": "Mosfilm",
       "archive": "Mosfilm",
       "watch_url": "https://www.youtube.com/watch?v=12WwlJYarow",
-      "source_url": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
-      "source_name": "Mosfilm studio or linked cinema source",
-      "provenance": "Third-party index attributes link to Mosfilm",
-      "embed_status": "requires_browser_test",
-      "us_availability": "unverified",
-      "full_length_status": "attributed_full_film_unchecked",
-      "tags": [
-        "Soviet cinema",
-        "Archive"
-      ],
-      "curated_score": 65
-    },
-    {
-      "id": "g22ux0aiCI4",
-      "title": "The Tale of Tsar Saltan",
-      "year": 1966,
-      "genre": "Fantasy",
-      "runtime_minutes": null,
-      "provider": "YouTube",
-      "uploader": "Mosfilm",
-      "archive": "Mosfilm",
-      "watch_url": "https://www.youtube.com/watch?v=g22ux0aiCI4",
       "source_url": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
       "source_name": "Mosfilm studio or linked cinema source",
       "provenance": "Third-party index attributes link to Mosfilm",
@@ -171,28 +127,6 @@
       "uploader": "Mosfilm",
       "archive": "Mosfilm",
       "watch_url": "https://www.youtube.com/watch?v=Amh3uudVMBo",
-      "source_url": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
-      "source_name": "Mosfilm studio or linked cinema source",
-      "provenance": "Third-party index attributes link to Mosfilm",
-      "embed_status": "requires_browser_test",
-      "us_availability": "unverified",
-      "full_length_status": "attributed_full_film_unchecked",
-      "tags": [
-        "Soviet cinema",
-        "Archive"
-      ],
-      "curated_score": 65
-    },
-    {
-      "id": "5aK0KP27iqg",
-      "title": "Moon Rainbow",
-      "year": 1983,
-      "genre": "Sci-Fi",
-      "runtime_minutes": null,
-      "provider": "YouTube",
-      "uploader": "Mosfilm",
-      "archive": "Mosfilm",
-      "watch_url": "https://www.youtube.com/watch?v=5aK0KP27iqg",
       "source_url": "https://www.devildead.com/news/11345/films-sovietiques-et-russes-de-mosfilm-sur-youtube",
       "source_name": "Mosfilm studio or linked cinema source",
       "provenance": "Third-party index attributes link to Mosfilm",
@@ -306,6 +240,72 @@
       "source_url": "https://www.youtube.com/watch?v=8zooDjp0VrE",
       "source_name": "Mosfilm studio or linked cinema source",
       "provenance": "Mosfilm English channel listing; uploader mentions separate English version",
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "attributed_full_film_unchecked",
+      "tags": [
+        "Soviet cinema",
+        "Archive"
+      ],
+      "curated_score": 65
+    },
+    {
+      "id": "Z8ZhQPaw4rE",
+      "title": "Solaris",
+      "year": 1972,
+      "genre": "Sci-Fi",
+      "runtime_minutes": null,
+      "provider": "YouTube",
+      "uploader": "Mosfilm",
+      "archive": "Mosfilm",
+      "watch_url": "https://www.youtube.com/watch?v=Z8ZhQPaw4rE",
+      "source_url": "https://www.youtube.com/watch?v=Z8ZhQPaw4rE",
+      "source_name": "Mosfilm studio or linked cinema source",
+      "provenance": "Official Mosfilm YouTube listing explicitly says FULL MOVIE, Tarkovsky 1972",
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "attributed_full_film_unchecked",
+      "tags": [
+        "Soviet cinema",
+        "Archive"
+      ],
+      "curated_score": 65
+    },
+    {
+      "id": "NrMINC5xjMs",
+      "title": "Mirror",
+      "year": 1975,
+      "genre": "Drama",
+      "runtime_minutes": null,
+      "provider": "YouTube",
+      "uploader": "Mosfilm",
+      "archive": "Mosfilm",
+      "watch_url": "https://www.youtube.com/watch?v=NrMINC5xjMs",
+      "source_url": "https://www.youtube.com/watch?v=NrMINC5xjMs",
+      "source_name": "Mosfilm studio or linked cinema source",
+      "provenance": "Official Mosfilm YouTube listing explicitly says FULL MOVIE; filmed 1974, released 1975",
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "attributed_full_film_unchecked",
+      "tags": [
+        "Soviet cinema",
+        "Archive"
+      ],
+      "curated_score": 65
+    },
+    {
+      "id": "je75FDjcUP4",
+      "title": "Andrei Rublev",
+      "year": 1966,
+      "genre": "Drama",
+      "runtime_minutes": null,
+      "provider": "YouTube",
+      "uploader": "Mosfilm",
+      "archive": "Mosfilm",
+      "watch_url": "https://www.youtube.com/watch?v=je75FDjcUP4",
+      "source_url": "https://www.youtube.com/watch?v=je75FDjcUP4",
+      "source_name": "Mosfilm studio or linked cinema source",
+      "provenance": "Mosfilm studio full theatrical cut linked by cinema sources",
       "embed_status": "requires_browser_test",
       "us_availability": "unverified",
       "full_length_status": "attributed_full_film_unchecked",

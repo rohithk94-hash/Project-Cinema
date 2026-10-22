@@ -153,7 +153,21 @@ function card(m,reason){
  article.append(cover,info);return article
 }
 function paintRail(id,items,reasonFn){const rail=$(id);rail.replaceChildren();for(const m of items.slice(0,16))rail.append(card(m,reasonFn?reasonFn(m):''))}
-function renderChips(){const chips=$('chips');chips.replaceChildren();for(const g of GENRES){const b=button(g,'chip',()=>{filter=g;mode='all';render();document.getElementById('library').scrollIntoView({behavior:'smooth',block:'start'})});b.setAttribute('aria-pressed',String(filter===g));chips.append(b)}}
+function renderChips(){
+ const chips=$('chips');chips.replaceChildren();
+ for(const g of GENRES){const b=button(g,'chip',()=>{filter=g;mode='all';render()});b.setAttribute('aria-pressed',String(filter===g));chips.append(b)}
+ const xp=$('experienceChips');if(xp){xp.replaceChildren();for(const x of EXPERIENCES){const b=button(x,'chip',()=>{experience=x;mode='all';render()});b.setAttribute('aria-pressed',String(experience===x));xp.append(b)}}
+ const choices=$('focusChoices');if(choices){choices.replaceChildren();for(const [key,label] of FOCUS_OPTIONS){const b=button(label,'focus-chip',()=>{profile.focus=key;persist();render()});b.setAttribute('aria-pressed',String((profile.focus||'balanced')===key));choices.append(b)}}
+ document.querySelectorAll('.mood-tile').forEach(tile=>tile.setAttribute('aria-pressed',String(experience===tile.dataset.experience)));
+}
+function scrollToMovies(x){
+ experience=x;mode='all';filter='All';query='';$('search').value='';render();
+ $('library').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function renderGenreRail(id,x){
+ const picks=recommended(films.filter(m=>(m.experiences||[]).includes(x)));
+ const rail=$(id);if(rail)paintRail(id,picks,m=>m.hook||x);
+}
 function render(){
  savedCount();renderChips();
  const w=taste(),hasTaste=Object.values(w).some(n=>n>0);
@@ -162,10 +176,13 @@ function render(){
  const sorted=recommended(films);
  paintRail('personalRail',sorted,m=>(w[m.genre]||0)>0?'Because you explored '+m.genre:'Worth discovering');
  paintRail('editorsRail',films.slice().sort((a,b)=>(b.curated_score||0)-(a.curated_score||0)||title(a).localeCompare(title(b))));
+ renderGenreRail('spectacleRail','Visual Spectacle');
+ renderGenreRail('dramaRail','High-Stakes Drama');
+ renderGenreRail('funRail','Laugh-Out-Loud');
  const other=films.filter(m=>m.archive==='Korean Film Archive');paintRail('worldRail',(other.length?other:films.filter(m=>m.archive!=='My movies')).slice().reverse());
  const rec=Object.entries(profile.played).filter(([id,v])=>v&&films.some(m=>m.id===id)).sort((a,b)=>(b[1].last||0)-(a[1].last||0)).slice(0,10).map(([id])=>films.find(m=>m.id===id));$('recent-row').hidden=!rec.length;if(rec.length)paintRail('recentRail',rec);
  const shown=filtered(),grid=$('libraryGrid');grid.replaceChildren();shown.forEach(m=>grid.append(card(m)));$('noResults').hidden=!!shown.length;
- $('libraryTitle').textContent=mode==='saved'?'My List':'All films';$('librarySubtitle').textContent=mode==='saved'?'Movies you have saved for another night':'Full-length YouTube links from film studios and archives';
+ $('libraryTitle').textContent=mode==='saved'?'My List':'All films';$('librarySubtitle').textContent=mode==='saved'?'Movies you have saved for another night':'Discover by genre and experience, not by country or release year';
  $('totalCount').textContent=shown.length+' of '+films.length+' titles';$('heroSave').textContent=has('saved',featured.id)?'♥ In My List':'＋ My list';$('heroSave').setAttribute('aria-pressed',String(has('saved',featured.id)));$('heroCount').textContent=films.length+' films in the library';
 }
 let heroSelection=[],heroIndex=0,heroTimer=null,heroSwapTimer=null,heroPaused=false;
@@ -238,7 +255,7 @@ $('playerDialog').addEventListener('click',e=>{if(e.target===$('playerDialog'))c
 $('closePlayer').onclick=closePlayer;
 $('heroPlay').onclick=()=>play(featured);$('heroSave').onclick=()=>toggle('saved',featured.id);
 $('surprise').onclick=()=>{const choices=films.filter(m=>!profile.played[m.id]&&!has('dislikes',m.id));const pool=choices.length?choices:films;play(pool[Math.floor(Math.random()*pool.length)])};
-function showSaved(){mode='saved';query='';filter='All';$('search').value='';render();$('library').scrollIntoView({behavior:'smooth',block:'start'})}
+function showSaved(){mode='saved';query='';filter='All';experience='All experiences';$('search').value='';render();$('library').scrollIntoView({behavior:'smooth',block:'start'})}
 $('navSaved').addEventListener('click',e=>{e.preventDefault();showSaved()});$('headerSaved').onclick=showSaved;
 $('focusSearch').onclick=()=>{$('library').scrollIntoView({behavior:'smooth'});$('search').focus({preventScroll:true})};
 $('search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();render()});
@@ -253,14 +270,31 @@ $('addForm').addEventListener('submit',e=>{
  if(!name){$('formError').textContent='Please provide a movie title.';return}
  if(films.some(m=>m.id===id)){$('formError').textContent='This film is already listed.';return}
  const m={id,title:name,year:Number($('addYear').value)||'',genre:$('addGenre').value,archive:'My movies',uploader:'Added by you',source_url:'https://www.youtube.com/watch?v='+id,curated_score:55,tags:['My movies'],embed_status:'requires_browser_test'};
- profile.custom.push(m);films.push(m);persist();$('addForm').reset();$('addDialog').close();mode='all';filter='All';query='';$('search').value='';render();toast('Film added to your local collection');
+ profile.custom.push(m);films.push(m);persist();$('addForm').reset();$('addDialog').close();mode='all';filter='All';experience='All experiences';query='';$('search').value='';render();toast('Film added to your local collection');
 });
+document.querySelectorAll('.mood-tile').forEach(b=>b.addEventListener('click',()=>scrollToMovies(b.dataset.experience)));
 async function init(){
- try{const response=await fetch('./catalog.json',{cache:'no-cache'});if(!response.ok)throw Error('Movie catalog not published');const data=await response.json();if(!Array.isArray(data.movies)||data.movies.length<20)throw Error('Movie catalog is incomplete');
- const existing=new Set(),incoming=[];for(const m of data.movies){if(!m||!VALID_ID.test(m.id)||typeof m.title!=='string'||!m.title.trim()||existing.has(m.id))continue;existing.add(m.id);incoming.push(m)}
- if(incoming.length<20)throw Error('Too few source-linked film IDs');
- films=incoming;const seen=new Set(films.map(m=>m.id));for(const m of profile.custom){if(m&&VALID_ID.test(m.id)&&typeof m.title==='string'&&!seen.has(m.id)){films.push(m);seen.add(m.id)}}
- setupHeroRotation();
+ try{
+  const responses=await Promise.all(['./catalog.json','./new-features.json','./cinema-experiences.json'].map(p=>fetch(p,{cache:'no-cache'})));
+  if(responses.some(r=>!r.ok))throw Error('Movie catalog or discovery data not published');
+  const [archive,additions,editorial]=await Promise.all(responses.map(r=>r.json()));
+  if(!Array.isArray(archive.movies)||archive.movies.length<30||!Array.isArray(additions.movies)||!editorial.movies)throw Error('Movie discovery data is incomplete');
+  const existing=new Set(),incoming=[];
+  for(const m of [...archive.movies,...additions.movies]){
+   if(!m||!VALID_ID.test(m.id)||typeof m.title!=='string'||!m.title.trim()||existing.has(m.id))continue;
+   existing.add(m.id);
+   const mark=editorial.movies[m.title]||{};
+   incoming.push({...m,...mark,genres:mark.genres||m.genres||[m.genre],experiences:mark.experiences||[]});
+  }
+  if(incoming.length<35)throw Error('Too few source-linked film IDs');
+  films=incoming;
+  const seen=new Set(films.map(m=>m.id));
+  for(const m of profile.custom){
+   if(m&&VALID_ID.test(m.id)&&typeof m.title==='string'&&!seen.has(m.id)){
+    films.push({...m,genres:[m.genre],experiences:[]});seen.add(m.id);
+   }
+  }
+  setupHeroRotation();
  }catch(error){console.error('Project Cinema catalog error',error);films=[DEFAULT_MOVIE];setupHeroRotation();toast('Movie catalog unavailable; showing the reference film')}
  render();
 }

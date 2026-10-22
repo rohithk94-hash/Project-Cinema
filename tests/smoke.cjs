@@ -22,6 +22,12 @@ async function run(){
   await page.locator('#heroDots button').nth(1).click();
   assert.equal(await page.locator('#heroTitle').innerText(),'The Diamond Arm','Hero carousel should change featured film');
   assert((await page.locator('#heroArtNext').getAttribute('style')).includes('MkHiu9fD820'),'Hero artwork must change with title');
+  // Regression: the previous version paused indefinitely whenever the mouse
+  // was anywhere over the banner, making the carousel appear static.
+  await page.mouse.move(250,270);
+  await page.waitForTimeout(7100);
+  assert.equal(await page.locator('#heroTitle').innerText(),'The Cranes Are Flying','Hero must auto-rotate even with pointer over banner');
+
   const first=page.locator('#libraryGrid .movie-card').first();
   await first.locator('button.cover').click();
   assert(await page.locator('#playerDialog').evaluate(el=>el.open),'Clicking a movie must open modal');

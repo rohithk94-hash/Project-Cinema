@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'catalog.json'
       - 'scripts/verify_catalog.py'
       - '.github/workflows/verify-catalog.yml'
 permissions:

@@ -41,6 +41,9 @@ SEEDS = [
     ("Gentlemen of Fortune",1971,"8tJPKSz6Gaw","Comedy","Mosfilm","https://www.youtube.com/watch?v=8tJPKSz6Gaw","Verified Mosfilm-channel listing in search index"),
     ("The Ascent",1977,"v21lQ449T3Y","Drama","Mosfilm","https://www.youtube.com/watch?v=v21lQ449T3Y","Mosfilm English channel listing"),
     ("Ballad of a Soldier",1959,"8zooDjp0VrE","Drama","Mosfilm","https://www.youtube.com/watch?v=8zooDjp0VrE","Mosfilm English channel listing; uploader mentions separate English version"),
+    ("Solaris",1972,"Z8ZhQPaw4rE","Sci-Fi","Mosfilm","https://www.youtube.com/watch?v=Z8ZhQPaw4rE","Official Mosfilm YouTube listing explicitly says FULL MOVIE, Tarkovsky 1972"),
+    ("Mirror",1975,"NrMINC5xjMs","Drama","Mosfilm","https://www.youtube.com/watch?v=NrMINC5xjMs","Official Mosfilm YouTube listing explicitly says FULL MOVIE; filmed 1974, released 1975"),
+    ("Andrei Rublev",1966,"je75FDjcUP4","Drama","Mosfilm","https://www.youtube.com/watch?v=je75FDjcUP4","Mosfilm studio full theatrical cut linked by cinema sources"),
     ("Afonya",1975,"IszoiMr-nBs","Comedy","Mosfilm","https://www.youtube.com/watch?v=IszoiMr-nBs","Mosfilm official English channel: Afonya | COMEDY | FULL MOVIE, 1975"),
     ("The Cranes Are Flying",1957,"2OccZQmxKac","Drama","Mosfilm","https://www.reddit.com/r/IMDbFilmGeneral/comments/oqwyqk","Linked in community to Mosfilm original channel; uploader unconfirmed"),
     ("Operation Y and Shurik's Other Adventures",1965,"m3n4LptYWNo","Comedy","Mosfilm","https://www.youtube.com/watch?v=m3n4LptYWNo","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
@@ -150,6 +153,8 @@ def main():
     # Deterministic order based on index ranking; cap total to 40.
     movies=[]
     for title,year,id,genre,archive,url,provenance in SEEDS:
+        if id in {"TGRDYpCmMcM", "g22ux0aiCI4", "5aK0KP27iqg"}:
+            continue  # YouTube metadata returned HTTP 403 in the US validation runner, not counted as ready player candidates
         movies.append(dict(
             id=id,title=title,year=year,genre=genre,runtime_minutes=None,
             provider="YouTube",uploader=archive,archive=archive,watch_url="https://www.youtube.com/watch?v="+id,

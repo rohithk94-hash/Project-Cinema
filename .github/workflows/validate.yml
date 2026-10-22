@@ -8,9 +8,18 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 9
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node tests/validate.cjs
+      - name: Validate code and source catalog
+        run: node tests/validate.cjs
+      - name: Install browser test dependency
+        run: npm install --no-save --no-audit --no-fund playwright-core@1.55.0
+      - name: Smoke test local website in headless Chrome
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/project-cinema-server.log 2>&1 &
+          sleep 2
+          node tests/smoke.cjs

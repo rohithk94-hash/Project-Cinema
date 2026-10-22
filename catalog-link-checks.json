@@ -1,11 +1,10 @@
 {
-  "checked_at": "2026-10-22T04:09:41.277330+00:00",
+  "checked_at": "2026-10-22T04:13:03.733779+00:00",
   "disclaimer": "YouTube oEmbed metadata does not establish full-length runtime, third-party iframe permission, US geo-availability or successful playback. HTTP failures are inconclusive.",
   "count": 36,
   "metadata_summary": {
-    "source_channel_confirmed": 32,
-    "metadata_http_403": 3,
-    "source_channel_mismatch": 1
+    "source_channel_confirmed": 33,
+    "metadata_http_403": 3
   },
   "checks": [
     {
@@ -115,6 +114,14 @@
     {
       "id": "8zooDjp0VrE",
       "title": "Ballad of a Soldier",
+      "expected_uploader": "Mosfilm",
+      "metadata_status": "source_channel_confirmed",
+      "actual_uploader": "Mosfilm",
+      "http_status": 200
+    },
+    {
+      "id": "IszoiMr-nBs",
+      "title": "Afonya",
       "expected_uploader": "Mosfilm",
       "metadata_status": "source_channel_confirmed",
       "actual_uploader": "Mosfilm",
@@ -270,14 +277,6 @@
       "expected_uploader": "Korean Film Archive",
       "metadata_status": "source_channel_confirmed",
       "actual_uploader": "한국고전영화 Korean Classic Film",
-      "http_status": 200
-    },
-    {
-      "id": "OcJ24yKEI_E",
-      "title": "The Flower in Hell",
-      "expected_uploader": "Korean Film Archive",
-      "metadata_status": "source_channel_mismatch",
-      "actual_uploader": "NipponKino",
       "http_status": 200
     },
     {

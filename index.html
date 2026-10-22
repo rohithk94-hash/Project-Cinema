@@ -86,10 +86,13 @@ dialog{color:var(--fg);background:#15161b;border:1px solid #ffffff30;border-radi
 (function(){
 "use strict";
 const $=id=>document.getElementById(id);
-const STORE='project-cinema-profile-v3',VALID_ID=/^[A-Za-z0-9_-]{11}$/,GENRES=['All','Drama','Comedy','Sci-Fi','War','Romance','Mystery','Adventure','Fantasy','Horror','Korean cinema','Mosfilm'];
+const STORE='project-cinema-profile-v3',VALID_ID=/^[A-Za-z0-9_-]{11}$/;
+const GENRES=['All','Action','Adventure','Sci-Fi','Fantasy','Thriller','Mystery','Drama','Comedy','Horror','Romance','War','Animation','Family','Historical'];
+const EXPERIENCES=['All experiences','Visual Spectacle','High-Stakes Drama','Nonstop Action','Edge-of-Your-Seat','Mind-Bending','Laugh-Out-Loud','Emotional Rollercoaster','Epic & Immersive','Dark & Chilling','Feel-Good','Great Storytelling'];
+const FOCUS_OPTIONS=[['balanced','Mix it up'],['spectacle','Visual spectacle'],['story','Great story'],['entertainment','Pure entertainment']];
 const DEFAULT_MOVIE={id:'zjIiApN6cfg',title:'Come and See',year:1985,genre:'Drama',archive:'Mosfilm',uploader:'Mosfilm',source_url:'https://www.youtube.com/watch?v=zjIiApN6cfg',source_name:'Official Mosfilm upload',tags:['Soviet cinema','Archive'],curated_score:94,embed_status:'requires_browser_test',full_length_status:'attributed_full_film_unchecked'};
-const defaults=()=>({saved:[],likes:[],dislikes:[],played:{},custom:[]});
-let films=[DEFAULT_MOVIE],featured=DEFAULT_MOVIE,filter='All',mode='all',query='',sortBy='recommended',profile=defaults(),lastFocused=null;
+const defaults=()=>({saved:[],likes:[],dislikes:[],played:{},custom:[],focus:'balanced'});
+let films=[DEFAULT_MOVIE],featured=DEFAULT_MOVIE,filter='All',experience='All experiences',mode='all',query='',sortBy='recommended',profile=defaults(),lastFocused=null;
 try{const data=JSON.parse(localStorage.getItem(STORE)||'null');if(data&&typeof data==='object'){profile={...defaults(),...data};for(const key of ['saved','likes','dislikes','custom'])if(!Array.isArray(profile[key]))profile[key]=[];if(!profile.played||typeof profile.played!=='object')profile.played={}}}catch(e){console.warn('Preferences unavailable',e)}
 function persist(){try{localStorage.setItem(STORE,JSON.stringify(profile))}catch(e){console.warn('Unable to store preferences',e)}}
 function has(key,id){return profile[key].includes(id)}
@@ -97,11 +100,39 @@ function toggle(key,id){const a=profile[key];profile[key]=a.includes(id)?a.filte
 function getYear(m){return Number(m.year)||0}
 function title(m){return m.title||'Untitled film'}
 function savedCount(){$('listCount').textContent=profile.saved.length?'('+profile.saved.length+')':''}
-function taste(){const weights={};films.forEach(m=>{const g=m.genre||'Drama';if(has('likes',m.id))weights[g]=(weights[g]||0)+9;if(has('saved',m.id))weights[g]=(weights[g]||0)+4;if(profile.played[m.id])weights[g]=(weights[g]||0)+Math.min(3,profile.played[m.id].count||0);if(has('dislikes',m.id))weights[g]=(weights[g]||0)-3});return weights}
+function taste(){
+ const weights={};
+ for(const m of films){
+  const affinity=(has('likes',m.id)?8:0)+(has('saved',m.id)?4:0)+(profile.played[m.id]?Math.min(3,profile.played[m.id].count||0):0)-(has('dislikes',m.id)?5:0);
+  for(const g of m.genres||[m.genre||'Drama'])weights[g]=(weights[g]||0)+affinity;
+ }
+ return weights;
+}
 function stable(m){let h=0;for(const c of m.id)h=(h*31+c.charCodeAt(0))|0;return ((h>>>0)%101)/100}
-function score(m,weights){const play=profile.played[m.id];const personal=(weights[m.genre]||0)*1.9+(has('saved',m.id)?8:0)+(has('likes',m.id)?12:0)-(has('dislikes',m.id)?32:0);const novelty=play?-Math.min(12,(play.count||1)*3):10;return (Number(m.curated_score)||65)*.18+personal+novelty+stable(m)}
+function score(m,weights){
+ const play=profile.played[m.id],a=m.appeal||{};
+ const spectacle=Number(a.spectacle)||3,story=Number(a.story)||3,entertainment=Number(a.entertainment)||3;
+ const focus=profile.focus||'balanced';
+ const weightedAppeal=focus==='balanced'?(spectacle+story+entertainment)*2:
+  focus==='spectacle'?(spectacle*5+story+entertainment):
+  focus==='story'?(story*5+spectacle+entertainment):(entertainment*5+spectacle+story);
+ const genreAffinity=(m.genres||[m.genre]).reduce((sum,g)=>sum+(weights[g]||0),0);
+ const personal=genreAffinity*.6+(has('saved',m.id)?8:0)+(has('likes',m.id)?12:0)-(has('dislikes',m.id)?35:0);
+ const novelty=play?-Math.min(12,(play.count||1)*3):10;
+ return (Number(m.curated_score)||65)*.19+weightedAppeal+personal+novelty+stable(m);
+}
 function recommended(items){const w=taste();return items.slice().sort((a,b)=>score(b,w)-score(a,w)||title(a).localeCompare(title(b)))}
-function filtered(){let items=films.filter(m=>mode!=='saved'||has('saved',m.id));if(filter!=='All')items=items.filter(m=>filter==='Korean cinema'?m.archive==='Korean Film Archive':filter==='Mosfilm'?m.archive==='Mosfilm':m.genre===filter);if(query)items=items.filter(m=>[m.title,m.year,m.genre,m.archive,m.uploader].join(' ').toLowerCase().includes(query));if(sortBy==='az')items.sort((a,b)=>title(a).localeCompare(title(b)));else if(sortBy==='newest')items.sort((a,b)=>getYear(b)-getYear(a));else if(sortBy==='oldest')items.sort((a,b)=>getYear(a)-getYear(b));else items=recommended(items);return items}
+function filtered(){
+ let items=films.filter(m=>mode!=='saved'||has('saved',m.id));
+ if(filter!=='All')items=items.filter(m=>(m.genres||[m.genre]).includes(filter));
+ if(experience!=='All experiences')items=items.filter(m=>(m.experiences||[]).includes(experience));
+ if(query)items=items.filter(m=>[m.title,m.year,m.genre,m.country,m.archive,m.uploader,...(m.genres||[]),...(m.experiences||[])].join(' ').toLowerCase().includes(query));
+ if(sortBy==='az')items.sort((a,b)=>title(a).localeCompare(title(b)));
+ else if(sortBy==='newest')items.sort((a,b)=>getYear(b)-getYear(a));
+ else if(sortBy==='oldest')items.sort((a,b)=>getYear(a)-getYear(b));
+ else items=recommended(items);
+ return items;
+}
 function button(label,className,action){const b=document.createElement('button');b.type='button';b.className=className;b.textContent=label;if(action)b.onclick=action;return b}
 function node(tag,className,textValue){const n=document.createElement(tag);if(className)n.className=className;if(textValue!==undefined)n.textContent=textValue;return n}
 function notifyImage(img,cover,m){img.addEventListener('error',function(){if(img.dataset.fallback)return;img.dataset.fallback='1';img.src='https://i.ytimg.com/vi/'+m.id+'/hqdefault.jpg';img.addEventListener('error',function(){img.remove();cover.insertBefore(node('span','cover-fallback',title(m)),cover.firstChild)},{once:true})},{once:true})}
@@ -109,9 +140,11 @@ function card(m,reason){
  const article=node('article','movie-card');article.dataset.movieId=m.id;
  const cover=button('','cover',()=>play(m));cover.setAttribute('aria-label','Play '+title(m));
  const img=node('img');img.alt='Film thumbnail: '+title(m);img.loading='lazy';img.src='https://i.ytimg.com/vi/'+m.id+'/hqdefault.jpg';notifyImage(img,cover,m);
- cover.append(img,node('span','play-circle','▶'),node('span','cover-badge',m.archive==='Mosfilm'?'MOSFILM':m.archive==='Korean Film Archive'?'KOFA · KOREA':'MY MOVIES'));
+ const distributor=m.archive==='Mosfilm'?'MOSFILM':m.archive==='Korean Film Archive'?'KOFA · KOREA':m.archive==='FilmRise'?'FILMRISE':m.archive==='Indie Rights'?'INDIE RIGHTS':'MY MOVIES';
+ cover.append(img,node('span','play-circle','▶'),node('span','cover-badge',distributor));
  const info=node('div','card-bottom');const h=node('h3','card-name',title(m));h.title=title(m);info.append(h);
  const meta=node('div','card-meta');[m.year||'Film',m.genre||'Drama'].forEach(v=>meta.append(node('span','',String(v))));info.append(meta);
+ if(m.experiences&&m.experiences.length)info.append(node('div','mood-label',m.experiences.slice(0,2).join(' · ')));
  const footer=node('div','card-footer');const actions=node('div','movie-actions');
  const save=button(has('saved',m.id)?'♥':'＋','mini-action',()=>toggle('saved',m.id));save.setAttribute('aria-label',has('saved',m.id)?'Remove '+title(m)+' from My List':'Add '+title(m)+' to My List');save.setAttribute('aria-pressed',String(has('saved',m.id)));save.title='My List';
  const like=button('★','mini-action',()=>toggle('likes',m.id));like.setAttribute('aria-label',has('likes',m.id)?'Unlike '+title(m):'Like '+title(m));like.setAttribute('aria-pressed',String(has('likes',m.id)));like.title='Improve recommendations';
@@ -151,7 +184,7 @@ function hero(m,animate=true){
  featured=m;$('heroTitle').textContent=title(m);
  setHeroArt(m);
  const meta=$('heroMeta');meta.replaceChildren();[m.year||'',m.genre||'',m.archive||'YouTube'].filter(Boolean).forEach(x=>meta.append(node('span','',String(x))));
- $('heroDescription').textContent=m.archive==='Korean Film Archive'?'Explore a landmark of Korean cinema from the Korean Film Archive.':m.archive==='Mosfilm'?'Discover timeless cinema from the Mosfilm collection.':'A handpicked film to watch tonight.';
+ $('heroDescription').textContent=m.hook||'A cinematic discovery worth exploring, selected for its entertainment and storytelling.';
  $('heroSave').textContent=has('saved',m.id)?'♥ In My List':'＋ My list';
  $('heroSave').setAttribute('aria-pressed',String(has('saved',m.id)));
  $('heroArt').setAttribute('aria-label','Featured artwork for '+title(m));
@@ -169,7 +202,7 @@ function startHeroRotation(){
 }
 function setupHeroRotation(){
  // Start with a variety of films, never pin a single title as the background.
- const favorites=['Solaris','The Diamond Arm','The Cranes Are Flying','Afonya','The Marines Who Never Returned','Mirror','Love and Doves'];
+ const favorites=['Khumba','American Hero','White Tiger','Charade','Solaris','The Cranes Are Flying','Ilya Muromets'];
  heroSelection=favorites.map(name=>films.find(m=>m.title===name)).filter(Boolean);
  if(heroSelection.length<5)heroSelection=recommended(films).filter(m=>m.id!==DEFAULT_MOVIE.id).slice(0,7);
  heroIndex=0;

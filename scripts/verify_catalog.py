@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Metadata-only verification of direct film URLs. NOT an embedded playback test."""
+"""Metadata-only verification of studio and archive film IDs. Not browser playback or full-length verification."""
 import concurrent.futures
 import datetime
 import json

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-22T03:59:11Z",
+  "generated_at": "2026-10-22T04:12:27Z",
   "note": "Every record has a direct YouTube video ID linked by an editorial source. Browser playback, region and embedding are NOT independently verified. Autoplay only begins after user clicks.",
   "channel_sources": [
     "https://www.youtube.com/@Mosfilm_eng",
@@ -306,6 +306,28 @@
       "source_url": "https://www.youtube.com/watch?v=8zooDjp0VrE",
       "source_name": "Mosfilm studio or linked cinema source",
       "provenance": "Mosfilm English channel listing; uploader mentions separate English version",
+      "embed_status": "requires_browser_test",
+      "us_availability": "unverified",
+      "full_length_status": "attributed_full_film_unchecked",
+      "tags": [
+        "Soviet cinema",
+        "Archive"
+      ],
+      "curated_score": 65
+    },
+    {
+      "id": "IszoiMr-nBs",
+      "title": "Afonya",
+      "year": 1975,
+      "genre": "Comedy",
+      "runtime_minutes": null,
+      "provider": "YouTube",
+      "uploader": "Mosfilm",
+      "archive": "Mosfilm",
+      "watch_url": "https://www.youtube.com/watch?v=IszoiMr-nBs",
+      "source_url": "https://www.youtube.com/watch?v=IszoiMr-nBs",
+      "source_name": "Mosfilm studio or linked cinema source",
+      "provenance": "Mosfilm official English channel: Afonya | COMEDY | FULL MOVIE, 1975",
       "embed_status": "requires_browser_test",
       "us_availability": "unverified",
       "full_length_status": "attributed_full_film_unchecked",
@@ -730,29 +752,6 @@
       "archive": "Korean Film Archive",
       "watch_url": "https://www.youtube.com/watch?v=nN_pbS1FzSE",
       "source_url": "https://cinemaanthology.com/korean/films/yeong-jas-heydays/",
-      "source_name": "Cinema Anthology / KOFA YouTube listing",
-      "provenance": "KOFA channel link attributed by editorial page; direct ID extracted from official-channel link",
-      "embed_status": "requires_browser_test",
-      "us_availability": "unverified",
-      "full_length_status": "not_independently_tested",
-      "tags": [
-        "Korean cinema",
-        "English subtitles",
-        "Archive"
-      ],
-      "curated_score": 75
-    },
-    {
-      "id": "OcJ24yKEI_E",
-      "title": "The Flower in Hell",
-      "year": 1958,
-      "genre": "Thriller",
-      "runtime_minutes": 86,
-      "provider": "YouTube",
-      "uploader": "Korean Classic Film (KOFA, attributed by source)",
-      "archive": "Korean Film Archive",
-      "watch_url": "https://www.youtube.com/watch?v=OcJ24yKEI_E",
-      "source_url": "https://cinemaanthology.com/korean/films/the-flower-in-hell/",
       "source_name": "Cinema Anthology / KOFA YouTube listing",
       "provenance": "KOFA channel link attributed by editorial page; direct ID extracted from official-channel link",
       "embed_status": "requires_browser_test",

@@ -41,6 +41,7 @@ SEEDS = [
     ("Gentlemen of Fortune",1971,"8tJPKSz6Gaw","Comedy","Mosfilm","https://www.youtube.com/watch?v=8tJPKSz6Gaw","Verified Mosfilm-channel listing in search index"),
     ("The Ascent",1977,"v21lQ449T3Y","Drama","Mosfilm","https://www.youtube.com/watch?v=v21lQ449T3Y","Mosfilm English channel listing"),
     ("Ballad of a Soldier",1959,"8zooDjp0VrE","Drama","Mosfilm","https://www.youtube.com/watch?v=8zooDjp0VrE","Mosfilm English channel listing; uploader mentions separate English version"),
+    ("Afonya",1975,"IszoiMr-nBs","Comedy","Mosfilm","https://www.youtube.com/watch?v=IszoiMr-nBs","Mosfilm official English channel: Afonya | COMEDY | FULL MOVIE, 1975"),
     ("The Cranes Are Flying",1957,"2OccZQmxKac","Drama","Mosfilm","https://www.reddit.com/r/IMDbFilmGeneral/comments/oqwyqk","Linked in community to Mosfilm original channel; uploader unconfirmed"),
     ("Operation Y and Shurik's Other Adventures",1965,"m3n4LptYWNo","Comedy","Mosfilm","https://www.youtube.com/watch?v=m3n4LptYWNo","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
     ("Love and Doves",1984,"CLjLLHDUiiA","Romance","Mosfilm","https://www.youtube.com/watch?v=CLjLLHDUiiA","YouTube search index identifies Mosfilm channel and FULL MOVIE"),
@@ -141,7 +142,7 @@ def main():
         raise RuntimeError("Source index incomplete; refusing unreliable import")
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         results=list(pool.map(korean_movie,pages))
-    korean=[m for m in results if m]
+    korean=[m for m in results if m and m["id"] not in {"OcJ24yKEI_E"}]  # Uploader mismatch: NipponKino, not the claimed official KOFA channel
     print("KOFA direct-linked film entries",len(korean),flush=True)
     # Do not fabricate 30 entries if insufficient links are found.
     if len(korean)<10:
